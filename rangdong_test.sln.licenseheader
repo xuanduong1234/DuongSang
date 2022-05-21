@@ -1,0 +1,30 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+/* 
+ * Copyright (C) Hanoi University of Science and Technology - All Rights Reserved
+ * This file is written as part of Automated Guided Vehicles (AGV) Management System project. 
+ * The project is developed and managed by the team in Department of Industrial Automation (DIA), 
+ * School of Electrical and Computer Engineering (SEE), 
+ * Hanoi University of Science and Technology (HUST).
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Hoang Duc Chinh <dc.hoang.vn@gmail.com>, 2020 November
+ */
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) 2020 HUST - SEE - DIA - All Rights Reserved
+--%>
+extensions: .vb
+'Sample license text.
+extensions:  .xml .config .xsd
+
+/* 
+ * Copyright (C) Hanoi University of Science and Technology - All Rights Reserved
+ * This file is written as part of Automated Guided Vehicles (AGV) Management System project. 
+ * The project is developed and managed by the team in Department of Industrial Automation (DIA), 
+ * School of Electrical and Computer Engineering (SEE), 
+ * Hanoi University of Science and Technology (HUST).
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Hoang Duc Chinh <dc.hoang.vn@gmail.com>, 2020 November
+ */

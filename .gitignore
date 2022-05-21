@@ -1,0 +1,12 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+.vs/
+rangdong_agv/bin
+rangdong_agv/obj/
+TestResults
+UnitTestRangdongAGVdev/bin
+UnitTestRangdongAGVdev/obj

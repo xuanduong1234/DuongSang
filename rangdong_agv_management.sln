@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rangdong_agv", "rangdong_agv\rangdong_agv.csproj", "{645F7FF5-004E-4B8A-BA0A-142B599CE4BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rangdong_agvTests", "UnitTestRangdongAGVdev\rangdong_agvTests.csproj", "{8C10294C-B364-47AE-816B-CFE323D3E614}"
+	ProjectSection(ProjectDependencies) = postProject
+		{645F7FF5-004E-4B8A-BA0A-142B599CE4BA} = {645F7FF5-004E-4B8A-BA0A-142B599CE4BA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{645F7FF5-004E-4B8A-BA0A-142B599CE4BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645F7FF5-004E-4B8A-BA0A-142B599CE4BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645F7FF5-004E-4B8A-BA0A-142B599CE4BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645F7FF5-004E-4B8A-BA0A-142B599CE4BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C10294C-B364-47AE-816B-CFE323D3E614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C10294C-B364-47AE-816B-CFE323D3E614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C10294C-B364-47AE-816B-CFE323D3E614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C10294C-B364-47AE-816B-CFE323D3E614}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {415FEBEF-F63D-462C-ACC0-007938107FE7}
+	EndGlobalSection
+EndGlobal
