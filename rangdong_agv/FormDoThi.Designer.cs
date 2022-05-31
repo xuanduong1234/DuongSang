@@ -53,6 +53,7 @@ namespace rangdong_agv
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1018, 269);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FormDoThi
             // 
@@ -63,9 +64,10 @@ namespace rangdong_agv
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.elementHost1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormDoThi";
             this.Text = "FormDoThi";
+            this.Load += new System.EventHandler(this.FormDoThi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

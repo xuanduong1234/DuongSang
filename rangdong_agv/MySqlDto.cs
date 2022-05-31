@@ -31,15 +31,26 @@ namespace rangdong_agv
     }
     public class AgvActiveInMonth
     {
-        private int id;
-        private int agv_id;
-        private float totalActiveHour;
-        private DateTime time;
+       public int id;
+       public int agv_id;
+        public float totalActiveHour;
+        public DateTime time;
 
         public int Id { get => id; set => id = value; }
         public int Agv_id { get => agv_id; set => agv_id = value; }
         public float TotalActiveHour { get => totalActiveHour; set => totalActiveHour = value; }
         public DateTime Time { get => time; set => time = value; }
+        public AgvActiveInMonth(int id, int agv_id, int totalActiveHour, DateTime time)
+        {
+            this.id = id;
+            this.Agv_id = agv_id ;
+            this.TotalActiveHour = totalActiveHour;
+            this.Time = time;
+        }
+        public AgvActiveInMonth()
+        {
+            
+        }
     }
 
     public class AgvParams

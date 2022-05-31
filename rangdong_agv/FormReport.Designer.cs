@@ -42,6 +42,9 @@ namespace rangdong_agv
             this.rtxbTemplate = new System.Windows.Forms.RichTextBox();
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnSaveAs = new System.Windows.Forms.Button();
+            this.loadTemplateDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.saveReportDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -182,6 +185,14 @@ namespace rangdong_agv
             this.btnSaveAs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveAs.UseVisualStyleBackColor = true;
             // 
+            // loadTemplateDialog
+            // 
+            this.loadTemplateDialog.FileName = "loadTemplateDialog";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -218,5 +229,8 @@ namespace rangdong_agv
         private System.Windows.Forms.RichTextBox rtxbTemplate;
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Button btnSaveAs;
+        private System.Windows.Forms.OpenFileDialog loadTemplateDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.SaveFileDialog saveReportDialog;
     }
 }
