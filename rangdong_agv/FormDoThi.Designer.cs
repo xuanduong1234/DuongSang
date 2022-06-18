@@ -64,6 +64,7 @@ namespace rangdong_agv
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.elementHost1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormDoThi";
             this.Text = "FormDoThi";

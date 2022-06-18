@@ -53,6 +53,7 @@ namespace rangdong_agv
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelUsername = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnError = new FontAwesome.Sharp.IconButton();
             this.panelButtons.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -65,6 +66,7 @@ namespace rangdong_agv
             // 
             // panelButtons
             // 
+            this.panelButtons.Controls.Add(this.btnError);
             this.panelButtons.Controls.Add(this.btnChart);
             this.panelButtons.Controls.Add(this.txtBoxRxMsgTest);
             this.panelButtons.Controls.Add(this.btnExit);
@@ -102,11 +104,10 @@ namespace rangdong_agv
             // 
             // txtBoxRxMsgTest
             // 
-            this.txtBoxRxMsgTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxRxMsgTest.Location = new System.Drawing.Point(0, 424);
+            this.txtBoxRxMsgTest.Location = new System.Drawing.Point(0, 532);
             this.txtBoxRxMsgTest.Multiline = true;
             this.txtBoxRxMsgTest.Name = "txtBoxRxMsgTest";
-            this.txtBoxRxMsgTest.Size = new System.Drawing.Size(220, 265);
+            this.txtBoxRxMsgTest.Size = new System.Drawing.Size(220, 157);
             this.txtBoxRxMsgTest.TabIndex = 2;
             // 
             // btnExit
@@ -462,6 +463,32 @@ namespace rangdong_agv
             this.panelChildForm.Size = new System.Drawing.Size(1044, 649);
             this.panelChildForm.TabIndex = 2;
             // 
+            // btnError
+            // 
+            this.btnError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnError.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnError.FlatAppearance.BorderSize = 0;
+            this.btnError.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnError.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnError.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnError.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.btnError.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnError.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnError.IconSize = 32;
+            this.btnError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnError.Location = new System.Drawing.Point(0, 478);
+            this.btnError.Name = "btnError";
+            this.btnError.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnError.Size = new System.Drawing.Size(220, 54);
+            this.btnError.TabIndex = 8;
+            this.btnError.Text = "Lỗi";
+            this.btnError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnError.UseVisualStyleBackColor = false;
+            this.btnError.Click += new System.EventHandler(this.btnError_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,5 +545,6 @@ namespace rangdong_agv
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnSettings;
         private System.Windows.Forms.Button btnChart;
+        private FontAwesome.Sharp.IconButton btnError;
     }
 }

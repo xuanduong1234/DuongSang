@@ -134,6 +134,12 @@
     <Compile Include="FormDoThi.Designer.cs">
       <DependentUpon>FormDoThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDoThi.resx">
       <DependentUpon>FormDoThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>
