@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
+using System.IO;
 
 namespace rangdong_agv
 {
@@ -16,6 +18,7 @@ namespace rangdong_agv
         private AgvInfo agvInfo;
         private AgvParams agvParams;
         //private FormMain formMain;
+        private SerialPort comport1;
 
         public FormDelivery()
         {
@@ -26,13 +29,14 @@ namespace rangdong_agv
             this.agvIdSelected = 0x01;
         }
 
-        public FormDelivery(AgvParams _agvParams)
+        public FormDelivery(AgvParams _agvParams, SerialPort _comPort)
         {
             InitializeComponent();
             this.agvInfo = new AgvInfo();
             this.agvParams = _agvParams;
             //this.formMain = new FormMain();
             this.agvIdSelected = 0x01;
+            this.comport1 = _comPort;
         }
 
         //public FormDelivery(FormMain _formMain)

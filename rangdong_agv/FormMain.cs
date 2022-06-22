@@ -41,12 +41,13 @@ namespace rangdong_agv
             this.readComPortThread_cts = new CancellationTokenSource();
             InitializeComponent();
 
+            this.comPort = new SerialPort();
             this.agvInfo = new AgvInfo();
             this.agvParams = new AgvParams();
 
             this.formAgvOverview = new FormAgvOverview();
             //this.formDelivery = new FormDelivery(this);
-            this.formDelivery = new FormDelivery(this.agvParams);
+            this.formDelivery = new FormDelivery(this.agvParams, this.comPort);
             this.formReport = new FormReport();
             this.formSchedule = new FormSchedule();
             this.formSetting = new FormSetting();
@@ -241,7 +242,60 @@ namespace rangdong_agv
                                 // insert into database
                             }
                         }
-                        //if (message_type == LoraGenericPacket.)
+
+                        if (message_type == LoraGenericPacket.REPLY_AGV_CALL_PACKET_TYPE)
+                        {
+                            ReplyAgvCall replyAgvCall = new ReplyAgvCall();
+                            if (replyAgvCall.isReplyAgvCall(data_buffer))
+                            {
+                                parsed_message = replyAgvCall.getPayloadString(data_buffer); ;
+                            }
+                        }
+
+                        if (message_type == LoraGenericPacket.AGV_FEEDING_STATUS_TYPE)
+                        {
+                            AgvFeedingStatus agvFeedingStatus = new AgvFeedingStatus();
+                            if (agvFeedingStatus.isAgvFeedingStatus(data_buffer))
+                            {
+                                parsed_message = agvFeedingStatus.getPayloadString(data_buffer); ;
+                            }
+                        }
+
+                        if (message_type == LoraGenericPacket.AGV_DELIVERY_STATUS_TYPE)
+                        {
+                            AgvDeliveryStatus agvDeliveryStatus = new AgvDeliveryStatus();
+                            if (agvDeliveryStatus.isAgvDeliveryStatus(data_buffer))
+                            {
+                                parsed_message = agvDeliveryStatus.getPayloadString(data_buffer); ;
+                            }
+                        }
+
+                        if (message_type == LoraGenericPacket.AGV_EMPTY_TRAY_COLLECT_TYPE)
+                        {
+                            AgvEmptyTrayCollect agvEmptyTrayCollect = new AgvEmptyTrayCollect();
+                            if (agvEmptyTrayCollect.isAgvEmptyTrayCollect(data_buffer))
+                            {
+                                parsed_message = agvEmptyTrayCollect.getPayloadString(data_buffer); ;
+                            }
+                        }
+
+                        if (message_type == LoraGenericPacket.AGV_EMPTY_TRAY_RETURN_TYPE)
+                        {
+                            AgvEmptyTrayReturn agvEmptyTrayReturn = new AgvEmptyTrayReturn();
+                            if (agvEmptyTrayReturn.isAgvEmptyTrayReturn(data_buffer))
+                            {
+                                parsed_message = agvEmptyTrayReturn.getPayloadString(data_buffer); ;
+                            }
+                        }
+
+                        if (message_type == LoraGenericPacket.DELIVERY_STATION_REQUEST_MATERIAL_TYPE)
+                        {
+                            DeliveryStationRequestMaterial deliveryStationRequestMaterial = new DeliveryStationRequestMaterial();
+                            if (deliveryStationRequestMaterial.isDeliveryStationRequestMaterial(data_buffer))
+                            {
+                                parsed_message = deliveryStationRequestMaterial.getPayloadString(data_buffer); ;
+                            }
+                        }
 
                         // for testing only
                         Console.WriteLine(raw_message);
@@ -330,6 +384,7 @@ namespace rangdong_agv
             }
             //comPort.Close();
         }
+
 
         // For testing only
         public void AppendTextBox(string raw_value, string parsed_value)

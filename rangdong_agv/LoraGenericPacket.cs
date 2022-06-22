@@ -16,8 +16,8 @@ namespace rangdong_agv
         protected static readonly byte CONTROL_CENTRE_PC_ADDRESS = 0xFE;
 
         public static readonly byte ROUTE_PACKET_TYPE = 0x01;
-        public static readonly byte AGV_CALL_PACKET_TYPE = 0x05;
         public static readonly byte AGV_MATERIAL_PACKET_TYPE = 0x02;
+        public static readonly byte AGV_CALL_PACKET_TYPE = 0x05;
         public static readonly int PARAM_PACKET_TYPE = 0x10;
         public static readonly byte REPLY_AGV_CALL_PACKET_TYPE = 0x14;
         public static readonly byte AGV_FEEDING_STATUS_TYPE = 0x15;
@@ -71,17 +71,19 @@ namespace rangdong_agv
             }
         }
 
-        public ushort MessageCount {
+        public ushort MessageCount
+        {
             get => messageCount;
-            set {
+            set
+            {
                 int temp_value = 0;
-                if (0 <= value & value < 65535 )
+                if (0 <= value & value < 65535)
                     temp_value = value;
                 else
                     temp_value = 0;
 
-                messageCount = (ushort) temp_value;
-                Buffer.BlockCopy(getMessageCountInByteArray(), 0, header, messageCountOffset, 2);                
+                messageCount = (ushort)temp_value;
+                Buffer.BlockCopy(getMessageCountInByteArray(), 0, header, messageCountOffset, 2);
             }
         }
 
@@ -119,7 +121,7 @@ namespace rangdong_agv
             messageType = 0;
             byte[] messageCountByteArray = this.getMessageCountInByteArray();
             header = new byte[8] { startByte, frameLength, groupID, receiverAddr, senderAddr, messageCountByteArray[0], messageCountByteArray[1], messageType };
-            
+
             payload = new byte[1];
             payload[0] = 1;
 
@@ -162,13 +164,13 @@ namespace rangdong_agv
         {
             if (this.payload.Length > 0)
             {
-                frameLength = (byte) (header.Length + payload.Length + 1);
+                frameLength = (byte)(header.Length + payload.Length + 1);
                 outputPacket = new byte[frameLength];
                 header[frameLengthOffset] = frameLength;
 
                 Buffer.BlockCopy(header, 0, this.outputPacket, 0, header.Length);
                 Buffer.BlockCopy(payload, 0, this.outputPacket, header.Length, payload.Length);
-                this.outputPacket[frameLength-1] = endByte;
+                this.outputPacket[frameLength - 1] = endByte;
             }
         }
 
@@ -193,12 +195,11 @@ namespace rangdong_agv
             this.messageCount = BitConverter.ToUInt16(_messageCount, 0);
             this.messageType = inputPacket[messageTypeOffset];
 
-
             this.payload = new byte[inputPacket[payloadOffset]];
             Buffer.BlockCopy(inputPacket, payloadOffset, this.payload, 0, inputPacket[payloadOffset]);
 
             int endByteOffset = payloadOffset + inputPacket[payloadOffset];
-            
+
             if (inputPacket[endByteOffset] == END_BYTE)
             {
                 Console.WriteLine("Valid packet!");
@@ -212,7 +213,7 @@ namespace rangdong_agv
      * RoutePacket class represent the packet containing guidelines for agv to track the route
      * It is sent by central server to AGV
      */
-    public class RoutePacket:LoraGenericPacket
+    public class RoutePacket : LoraGenericPacket
     {
         private byte payload_length;
         private byte trip_id;
@@ -239,11 +240,11 @@ namespace rangdong_agv
             if (_payload_length > 1)
             {
                 payload_length = _payload_length;
-                trip_route = new byte[payload_length-1];
+                trip_route = new byte[payload_length - 1];
             }
         }
 
-        protected void setPayload() 
+        protected void setPayload()
         {
             payload = new byte[payload_length];
             payload[0] = payload_length;
@@ -268,7 +269,7 @@ namespace rangdong_agv
         {
             if (_trip_route.Length > 0)
             {
-                payload_length = (byte) (_trip_route.Length + 2);
+                payload_length = (byte)(_trip_route.Length + 2);
                 // need to calculate trip_id here
                 trip_route = new byte[_trip_route.Length];
                 Buffer.BlockCopy(_trip_route, 0, trip_route, 0, _trip_route.Length);
@@ -283,10 +284,10 @@ namespace rangdong_agv
             if (_payload_data.Length > 0 && _receiverAddr != CONTROL_CENTRE_PC_ADDRESS)
             {
                 ReceiverAddress = _receiverAddr;
-                payload_length = (byte) (_payload_data.Length+2);
+                payload_length = (byte)(_payload_data.Length + 2);
                 trip_id = _trip_id;
                 trip_route = new byte[_payload_data.Length];
-                Buffer.BlockCopy(_payload_data, 0, trip_route, 0, _payload_data.Length);                
+                Buffer.BlockCopy(_payload_data, 0, trip_route, 0, _payload_data.Length);
                 setPayload();
 
                 setOutputPacket();
@@ -314,10 +315,8 @@ namespace rangdong_agv
      * AgvCallPacket is used to call the AGV
      * Sent by central server to AGV
      */
-    public class AgvCallPacket:LoraGenericPacket
+    public class AgvCallPacket : LoraGenericPacket
     {
-
-
         private byte payload_length;
         private byte command; // call the agv to start an operation
 
@@ -347,7 +346,7 @@ namespace rangdong_agv
             this.command = _command;
 
             payload = new byte[2];
-            payload[0] = payload_length;            
+            payload[0] = payload_length;
             payload[1] = command;
 
             setOutputPacket();
@@ -372,8 +371,8 @@ namespace rangdong_agv
 
         public void setMaterialAndReceiver(byte _receiverAddr, byte _delivery_addr, byte[] _material_code)
         {
-            ReceiverAddress = _receiverAddr;            
-            payload_length = (byte) (3 + _material_code.Length);
+            ReceiverAddress = _receiverAddr;
+            payload_length = (byte)(3 + _material_code.Length);
             payload = new byte[payload_length];
             payload[0] = payload_length;
             payload[1] = 0x01; // deliver to 1 station 
@@ -423,36 +422,25 @@ namespace rangdong_agv
         private byte batt_percentage_agv; // 1 byte, in percentage: 0-100%
         private static readonly int batt_percentage_agv_payload_offset = 6;
 
-        private byte vbatt_agv; // 1 byte, in 10V unit, eg. 244 [10V] =  24.4V
-        private static readonly int vbatt_agv_payload_offset = 6;
+        private ushort vbatt_agv; // 1 byte, in 10V unit, eg. 244 [10V] =  24.4V
+        private byte[] vbatt_agv_byte;
+        private static readonly int vbatt_agv_payload_offset = 7;
 
         public byte State_agv { get => state_agv; set => state_agv = value; }
 
-        //public static int State_agv_payload_offset => state_agv_payload_offset;
-
         public byte Postion_agv { get => postion_agv; set => postion_agv = value; }
-
-        //public static int Postion_agv_payload_offset => postion_agv_payload_offset;
 
         public ushort Speed_agv { get => speed_agv; set => speed_agv = value; }
 
-        //public byte[] Speed_agv_byte { get => speed_agv_byte; set => speed_agv_byte = value; }
-
-        //public static int Speed_agv_payload_offset => speed_agv_payload_offset;
-
         public byte Batt_percentage_agv { get => batt_percentage_agv; set => batt_percentage_agv = value; }
 
-        //public static int Batt_percentage_agv_payload_offset => batt_percentage_agv_payload_offset;
-
-        public byte Vbatt_agv { get => vbatt_agv; set => vbatt_agv = value; }        
-
-        //public static int Vbatt_agv_payload_offset => vbatt_agv_payload_offset;
+        public ushort Vbatt_agv { get => vbatt_agv; set => vbatt_agv = value; }
 
         public bool isAgvParamPacket(byte[] inputpacket)
         {
             this.parsePacketHeader(inputpacket);
 
-            if(this.messageType != PARAM_PACKET_TYPE)
+            if (this.messageType != PARAM_PACKET_TYPE)
             {
                 return false;
             }
@@ -467,39 +455,38 @@ namespace rangdong_agv
                 Console.WriteLine("Not param message!");
                 return;
             }
-                
 
             if (this.payload.Length != this.payload[payload_length])
             {
                 Console.WriteLine("Wrong length of param message!");
                 return;
             }
-                
 
             this.state_agv = payload[state_agv_payload_offset];
-            Console.WriteLine("Set AGV sate: " + this.state_agv.ToString());
-            
+
             this.trip_id = payload[trip_id_payload_offset];
-            
+
             this.postion_agv = payload[postion_agv_payload_offset];
-            
+
             this.speed_agv_byte = new byte[2];
             Buffer.BlockCopy(this.payload, speed_agv_payload_offset, speed_agv_byte, 0, 2);
-            //this.speed_agv = BitConverter.ToUInt16(speed_agv_byte, 0);
+
             this.speed_agv = this.convert2ByteToNumber(this.speed_agv_byte);
 
             this.batt_percentage_agv = payload[batt_percentage_agv_payload_offset];
-            
-            this.vbatt_agv = payload[vbatt_agv_payload_offset];
-            //Buffer.BlockCopy(this.payload, vbatt_agv_payload_offset, _vbatt, 0, 2);
-            //this.vbatt_agv = BitConverter.ToUInt16(_vbatt, 0);
+
+            this.vbatt_agv_byte = new byte[2];
+            Buffer.BlockCopy(this.payload, vbatt_agv_payload_offset, vbatt_agv_byte, 0, 2);
+
+            this.vbatt_agv = this.convert2ByteToNumber(this.vbatt_agv_byte);
+
         }
 
         private ushort convert2ByteToNumber(byte[] inputByteArray)
         {
             ushort result = 0;
-            if (inputByteArray.Length==2) 
-            { 
+            if (inputByteArray.Length == 2)
+            {
                 result = (ushort)(inputByteArray[0] * 16 * 16 + inputByteArray[1]);
             }
             return result;
@@ -509,7 +496,7 @@ namespace rangdong_agv
         {
             string _packetString = "";
 
-            this.parsePacket(inputpacket); 
+            this.parsePacket(inputpacket);
 
             _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
             _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
@@ -523,30 +510,15 @@ namespace rangdong_agv
             _packetString += "Remaining battery: " + this.batt_percentage_agv.ToString() + "\r\n";
             _packetString += "Battery voltage: " + this.vbatt_agv.ToString() + "\r\n";
 
-            AgvParamsLatest agvParamsLatest = new AgvParamsLatest
-            {
-                vBart = this.vbatt_agv,
-                battCapacity = this.batt_percentage_agv,
-                position = this.postion_agv,
-                speed = this.speed_agv,
-                id = this.senderAddr.ToString(),
-                state = this.state_agv.ToString()
-            };
-            // MySqlDAO sqlDAO = new MySqlDAO();
-            new MySqlDAO().SaveAgvParamsLatest(agvParamsLatest);
-
             if (_packetString.Length == 0)
                 _packetString = "Wrong message";
 
             return _packetString;
-        }     
+        }
     }
-    
-    
+
     public class ReplyAgvCall : LoraGenericPacket
     {
-        private static readonly int REPLY_AGV_CALL_PACKET_TYPE = 0x14;
-
         private byte payload_length;
 
         private byte answer_agv;
@@ -575,17 +547,32 @@ namespace rangdong_agv
                 return;
             }
 
-
             if (this.payload.Length != this.payload[payload_length])
             {
                 Console.WriteLine("Wrong length of reply message!");
                 return;
             }
 
-
             this.answer_agv = payload[answer_agv_offset];
-            Console.WriteLine("Set AGV sate: " + this.state_agv.ToString());
             this.state_agv = payload[state_agv_offset];
+        }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "AGV state: " + this.state_agv.ToString() + "\r\n";
+            _packetString += "Answer AGV: " + this.answer_agv.ToString() + "\r\n";
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
         }
     }
 
@@ -643,9 +630,10 @@ namespace rangdong_agv
                 return;
             }
 
+            this.position_agv = payload[position_agv_offset];
+
             if (this.payload.Length == 13)
             {
-                this.position_agv = payload[position_agv_offset];
                 this.shelf_code1 = payload[shelf_code1_offset];
                 this.material_code1_byte = new byte[10];
                 Buffer.BlockCopy(this.payload, material_code1_offset, material_code1_byte, 0, 10);
@@ -653,15 +641,48 @@ namespace rangdong_agv
 
             if (this.payload.Length == 24)
             {
-                this.position_agv = payload[position_agv_offset];
                 this.shelf_code1 = payload[shelf_code1_offset];
                 this.material_code1_byte = new byte[10];
                 Buffer.BlockCopy(this.payload, material_code1_offset, material_code1_byte, 0, 10);
+
                 this.shelf_code2 = payload[shelf_code2_offset];
                 this.material_code2_byte = new byte[10];
                 Buffer.BlockCopy(this.payload, material_code2_offset, material_code2_byte, 0, 10);
             }
         }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "Position: " + this.position_agv.ToString() + "\r\n";
+
+            if (this.payload.Length == 13)
+            {
+                _packetString += "Shelf: " + this.shelf_code1.ToString() + "\r\n";
+                _packetString += "Material code: " + BitConverter.ToString(this.material_code1_byte, 0, this.material_code1_byte.Length).Replace("-", " ") + "\r\n";
+            }
+
+            if (this.payload.Length == 24)
+            {
+                _packetString += "Shelf: " + this.shelf_code1.ToString() + "\r\n";
+                _packetString += "Material code: " + BitConverter.ToString(this.material_code1_byte, 0, this.material_code1_byte.Length).Replace("-", " ") + "\r\n";
+
+                _packetString += "Shelf: " + this.shelf_code2.ToString() + "\r\n";
+                _packetString += "Material code: " + BitConverter.ToString(this.material_code2_byte, 0, this.material_code2_byte.Length).Replace("-", " ") + "\r\n";
+            }
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
+        }
+
     }
 
     public class AgvDeliveryStatus : LoraGenericPacket
@@ -709,11 +730,29 @@ namespace rangdong_agv
                 return;
             }
 
-
             this.position_agv = payload[position_agv_offset];
             this.shelf = payload[shelf_offset];
             this.material_code_byte = new byte[10];
             Buffer.BlockCopy(this.payload, material_code_offset, material_code_byte, 0, 10);
+        }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "Position: " + this.position_agv.ToString() + "\r\n";
+            _packetString += "Shelf: " + this.shelf.ToString() + "\r\n";
+            _packetString += "Material code: " + BitConverter.ToString(this.material_code_byte, 0, this.material_code_byte.Length).Replace("-", " ") + "\r\n";
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
         }
 
     }
@@ -752,7 +791,6 @@ namespace rangdong_agv
                 return;
             }
 
-
             if (this.payload.Length != this.payload[payload_length])
             {
                 Console.WriteLine("Wrong length of Empty Tray Collect message!");
@@ -763,9 +801,26 @@ namespace rangdong_agv
             this.shelf = payload[shelf_offset];
 
         }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "Position: " + this.position_agv.ToString() + "\r\n";
+            _packetString += "Shelf: " + this.shelf.ToString() + "\r\n";
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
+        }
     }
-        
-        
+
     public class AgvEmptyTrayReturn : LoraGenericPacket
     {
         private byte payload_length;
@@ -795,7 +850,6 @@ namespace rangdong_agv
             return true;
         }
 
-
         public void parsePacket(byte[] inputpacket)
         {
             if (!this.isAgvEmptyTrayReturn(inputpacket))
@@ -803,7 +857,6 @@ namespace rangdong_agv
                 Console.WriteLine("Not Empty Tray Return message!");
                 return;
             }
-
 
             if (this.payload.Length != this.payload[payload_length])
             {
@@ -823,12 +876,87 @@ namespace rangdong_agv
                 this.shelf_code1 = payload[shelf_code1_offset];
                 this.shelf_code2 = payload[shelf_code2_offset];
             }
-            
+        }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "Position: " + this.position_agv.ToString() + "\r\n";
+
+            if (this.payload.Length == 3)
+            {
+                _packetString += "Shelf: " + this.shelf_code1.ToString() + "\r\n";
+            }
+
+            if (this.payload.Length == 4)
+            {
+                _packetString += "Shelf: " + this.shelf_code1.ToString() + "\r\n";
+                _packetString += "Shelf: " + this.shelf_code2.ToString() + "\r\n";
+            }
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
         }
     }
-    
+
     public class DeliveryStationRequestMaterial : LoraGenericPacket
     {
+        private byte payload_length;
 
+        private byte state_agv;
+        private static readonly int state_agv_offset = 1;
+
+        public bool isDeliveryStationRequestMaterial(byte[] inputpacket)
+        {
+            this.parsePacketHeader(inputpacket);
+
+            if (this.messageType != DELIVERY_STATION_REQUEST_MATERIAL_TYPE)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void parsePacket(byte[] inputpacket)
+        {
+            if (!this.isDeliveryStationRequestMaterial(inputpacket))
+            {
+                Console.WriteLine("Not reply message!");
+                return;
+            }
+
+            if (this.payload.Length != this.payload[payload_length])
+            {
+                Console.WriteLine("Wrong length of reply message!");
+                return;
+            }
+            this.state_agv = payload[state_agv_offset];
+        }
+
+        public string getPayloadString(byte[] inputpacket)
+        {
+            string _packetString = "";
+
+            this.parsePacket(inputpacket);
+
+            _packetString += "Sent by AGV: " + this.senderAddr.ToString() + "\r\n";
+            _packetString += "Message type: " + this.messageType.ToString() + "\r\n";
+            _packetString += "Payload: " + BitConverter.ToString(this.payload, 0, this.payload.Length).Replace("-", " ") + "\r\n";
+            _packetString += "AGV state: " + this.state_agv.ToString() + "\r\n";
+
+            if (_packetString.Length == 0)
+                _packetString = "Wrong message";
+
+            return _packetString;
+        }
     }
 }
