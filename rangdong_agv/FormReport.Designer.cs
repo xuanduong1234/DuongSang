@@ -87,6 +87,7 @@ namespace rangdong_agv
             this.btnLoadTemplate.Text = "Load Template";
             this.btnLoadTemplate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadTemplate.UseVisualStyleBackColor = true;
+            this.btnLoadTemplate.Click += new System.EventHandler(this.btnLoadTemplate_Click_1);
             // 
             // txbEmail
             // 
@@ -171,6 +172,7 @@ namespace rangdong_agv
             this.btnPreview.Text = "Preview";
             this.btnPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click_1);
             // 
             // btnSaveAs
             // 
@@ -184,6 +186,7 @@ namespace rangdong_agv
             this.btnSaveAs.Text = "Save as";
             this.btnSaveAs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaveAs.UseVisualStyleBackColor = true;
+            this.btnSaveAs.Click += new System.EventHandler(this.btnSaveAs_Click_1);
             // 
             // loadTemplateDialog
             // 

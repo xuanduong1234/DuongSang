@@ -9,3 +9,13 @@ C:\Users\Sang-PC\source\repos\demo\demo\bin\Debug\demo.exe
 C:\Users\Sang-PC\source\repos\demo\demo\bin\Debug\demo.pdb
 C:\Users\Sang-PC\source\repos\demo\demo\obj\Debug\demo.exe
 C:\Users\Sang-PC\source\repos\demo\demo\obj\Debug\demo.pdb
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\bin\Debug\demo.exe.config
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\bin\Debug\demo.exe
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\bin\Debug\demo.pdb
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.csproj.AssemblyReference.cache
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.Form1.resources
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.Properties.Resources.resources
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.csproj.GenerateResource.cache
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.csproj.CoreCompileInputs.cache
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.exe
+C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.pdb

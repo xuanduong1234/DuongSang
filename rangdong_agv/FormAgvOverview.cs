@@ -24,7 +24,8 @@ namespace rangdong_agv
             this.strAgvId = "AGV-01";
             this.agvIdSelected = 0x01;
             this.updateAgvDetails();
-
+           
+            
             // Timer
             updateAgvDetailTimer.Tick += new EventHandler(TimerEventProcessor);
             // Sets the timer interval to 5 seconds.
@@ -185,6 +186,17 @@ namespace rangdong_agv
             agvDailyStatics.id = labelAgvId.Text;
             agvDailyStatics.date = System.DateTime.Parse(labelTimestamp.Text);
             return agvDailyStatics;
+        }
+
+        private void FormAgvOverview_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTimestamp.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }

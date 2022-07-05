@@ -29,6 +29,7 @@ namespace rangdong_agv
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelSummary = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelSession = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@ namespace rangdong_agv
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAgvList = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSummary.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -143,7 +145,6 @@ namespace rangdong_agv
             this.labelSession.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.labelSession.Size = new System.Drawing.Size(174, 30);
             this.labelSession.TabIndex = 20;
-            this.labelSession.Text = "Ca sáng";
             this.labelSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelTimestamp
@@ -151,12 +152,11 @@ namespace rangdong_agv
             this.labelTimestamp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTimestamp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimestamp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTimestamp.Location = new System.Drawing.Point(77, 33);
+            this.labelTimestamp.Location = new System.Drawing.Point(69, 33);
             this.labelTimestamp.Name = "labelTimestamp";
             this.labelTimestamp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.labelTimestamp.Size = new System.Drawing.Size(170, 30);
+            this.labelTimestamp.Size = new System.Drawing.Size(178, 30);
             this.labelTimestamp.TabIndex = 18;
-            this.labelTimestamp.Text = "26/02/2021 16:30";
             this.labelTimestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
@@ -1062,6 +1062,12 @@ namespace rangdong_agv
             this.panelAgvList.Size = new System.Drawing.Size(774, 470);
             this.panelAgvList.TabIndex = 6;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormAgvOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1073,6 +1079,7 @@ namespace rangdong_agv
             this.Controls.Add(this.panelSummary);
             this.Name = "FormAgvOverview";
             this.Text = "Overview";
+            this.Load += new System.EventHandler(this.FormAgvOverview_Load);
             this.panelSummary.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1157,5 +1164,6 @@ namespace rangdong_agv
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
