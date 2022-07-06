@@ -73,6 +73,31 @@ namespace rangdong_agv
         {
             updateAgvDetails();
         }
+        private void FormAgvOverview_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            TimeSpan time = new TimeSpan(6, 0, 0);
+            TimeSpan time1 = new TimeSpan(14, 0, 0);
+            TimeSpan time2 = new TimeSpan(22, 0, 0);
+            TimeSpan timeNow = DateTime.Now.TimeOfDay;
+            if(timeNow>time && timeNow<time1)
+            {
+                this.labelSession.Text = "Ca Sáng";
+            }
+            else if(timeNow>time1 && timeNow<time2)
+            {
+                this.labelSession.Text = "Ca Chiều";
+            }
+            else
+            {
+                this.labelSession.Text = "Ca Đêm";
+            }    
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTimes.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
 
         private void TimerEventAgv(Object myObject, EventArgs myEventArgs)
         {
@@ -86,6 +111,7 @@ namespace rangdong_agv
             try
             {
                 System.DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+                //System.DateTime dateTime = new System.DateTime();
                 dateTime = dateTime.AddSeconds(timestamp);
                 System.DateTime localDateTime = TimeZoneInfo.ConvertTimeFromUtc(dateTime, TimeZoneInfo.Local);
 
@@ -108,12 +134,12 @@ namespace rangdong_agv
             this.labelVBatt.Text = agvParams.Vbatt.ToString() ;
             this.labelBattCapacity.Text = agvParams.BattCap.ToString() ;
 
-            this.labelTimestamp.Text = this.getStrDateTime(agvParams.Timestamp);
+            this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
 
             this.labelAgvMaterialCode1.Text = this.agvParams.Shelf1;
             this.labelAgvMaterialCode2.Text = this.agvParams.Shelf2;
 
-            //this.labelTimestamp.Text = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
+            //this.labelTimes.Text = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
         }
 
         private void clearAgvDetails()
@@ -125,9 +151,9 @@ namespace rangdong_agv
             this.labelVBatt.Text = "N/A" + " mV";
             this.labelBattCapacity.Text = "N/A" + " %";*/
 
-            this.labelTimestamp.Text = this.getStrDateTime(agvParams.Timestamp);
+            this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
 
-            //this.labelTimestamp.Text = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
+            //this.labelTimes.Text = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
         }
 
         private void updateAgvDetails()
@@ -184,19 +210,10 @@ namespace rangdong_agv
             agvDailyStatics.totalLoad = int.Parse(labelLoadTotal.Text);
             agvDailyStatics.deliverySuccess = int.Parse(labelDeliverySuccsess.Text);
             agvDailyStatics.id = labelAgvId.Text;
-            agvDailyStatics.date = System.DateTime.Parse(labelTimestamp.Text);
+            agvDailyStatics.date = System.DateTime.Parse(labelTimes.Text);
             return agvDailyStatics;
         }
 
-        private void FormAgvOverview_Load(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            labelTimestamp.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-        }
+       
     }
 }

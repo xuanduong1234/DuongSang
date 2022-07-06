@@ -33,7 +33,6 @@ namespace rangdong_agv
             this.panelSummary = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelSession = new System.Windows.Forms.Label();
-            this.labelTimestamp = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -101,6 +100,7 @@ namespace rangdong_agv
             this.label1 = new System.Windows.Forms.Label();
             this.panelAgvList = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelTimes = new System.Windows.Forms.Label();
             this.panelSummary.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,7 +126,7 @@ namespace rangdong_agv
             // panel2
             // 
             this.panel2.Controls.Add(this.labelSession);
-            this.panel2.Controls.Add(this.labelTimestamp);
+            this.panel2.Controls.Add(this.labelTimes);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -146,18 +146,6 @@ namespace rangdong_agv
             this.labelSession.Size = new System.Drawing.Size(174, 30);
             this.labelSession.TabIndex = 20;
             this.labelSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelTimestamp
-            // 
-            this.labelTimestamp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTimestamp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimestamp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTimestamp.Location = new System.Drawing.Point(69, 33);
-            this.labelTimestamp.Name = "labelTimestamp";
-            this.labelTimestamp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.labelTimestamp.Size = new System.Drawing.Size(178, 30);
-            this.labelTimestamp.TabIndex = 18;
-            this.labelTimestamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
             // 
@@ -1068,6 +1056,18 @@ namespace rangdong_agv
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelTimes
+            // 
+            this.labelTimes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTimes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTimes.Location = new System.Drawing.Point(69, 33);
+            this.labelTimes.Name = "labelTimes";
+            this.labelTimes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelTimes.Size = new System.Drawing.Size(178, 30);
+            this.labelTimes.TabIndex = 18;
+            this.labelTimes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormAgvOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1158,12 +1158,12 @@ namespace rangdong_agv
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelPostion;
         private System.Windows.Forms.Label labelPostionc;
-        private System.Windows.Forms.Label labelTimestamp;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label labelSession;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelTimes;
     }
 }
