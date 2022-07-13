@@ -131,10 +131,10 @@ namespace rangdong_agv
             this.labelState.Text = agvParams.State.ToString();
             this.labelPostion.Text = agvParams.Position.ToString();
             this.labelSpeed.Text = agvParams.Speed.ToString() ;
-            this.labelVBatt.Text = agvParams.Vbatt.ToString() ;
-            this.labelBattCapacity.Text = agvParams.BattCap.ToString() ;
+            this.labelVBatt.Text = agvParams.Vbatt.ToString();
+            this.labelBattCapacity.Text = agvParams.BattCap.ToString();
 
-            this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
+            //this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
 
             this.labelAgvMaterialCode1.Text = this.agvParams.Shelf1;
             this.labelAgvMaterialCode2.Text = this.agvParams.Shelf2;
@@ -151,7 +151,7 @@ namespace rangdong_agv
             this.labelVBatt.Text = "N/A" + " mV";
             this.labelBattCapacity.Text = "N/A" + " %";*/
 
-            this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
+            //this.labelTimes.Text = this.getStrDateTime(agvParams.Timestamp);
 
             //this.labelTimes.Text = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
         }
@@ -182,7 +182,7 @@ namespace rangdong_agv
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.strAgvId = "AGV-03";
-            this.agvIdSelected = 0x02;
+            this.agvIdSelected = 0x03;
             this.updateSelectedAgvDetails(); // to be revised
             labelActiveHour.Text = totalActiveHour(3).ToString();
         }
@@ -210,7 +210,9 @@ namespace rangdong_agv
             agvDailyStatics.totalLoad = int.Parse(labelLoadTotal.Text);
             agvDailyStatics.deliverySuccess = int.Parse(labelDeliverySuccsess.Text);
             agvDailyStatics.id = labelAgvId.Text;
-            agvDailyStatics.date = System.DateTime.Parse(labelTimes.Text);
+            //agvDailyStatics.date = System.DateTime.Parse(labelTimes.Text);
+            string now = DateTime.Now.ToString("dd/MM/yyyy");
+            //agvDailyStatics.date = DateTime.Parse(now);
             return agvDailyStatics;
         }
 

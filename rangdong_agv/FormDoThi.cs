@@ -85,7 +85,7 @@ namespace rangdong_agv
                 Title = "TongThoiGianHoatDong",
                 LabelFormatter = value => value.ToString("0")
             });
-            cartesianChart1.LegendLocation = LiveCharts.LegendLocation.Right;
+            cartesianChart1.LegendLocation = LegendLocation.Right;
             cartesianChart1.Series.Clear();
             
             SeriesCollection series = new SeriesCollection();

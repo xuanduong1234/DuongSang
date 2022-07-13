@@ -229,7 +229,7 @@ namespace rangdong_agv
                         if (data_count == 1)
                         {
                             Buffer.BlockCopy(buffer, 0, data_buffer, 1, count);
-                            string raw_message = System.Text.Encoding.Default.GetString(data_buffer, 0, count+1);
+                            string raw_message = Encoding.Default.GetString(data_buffer, 0, count+1);
                             raw_message = BitConverter.ToString(data_buffer, 0, count+1).Replace("-", " ");
 
                             string parsed_message = "";

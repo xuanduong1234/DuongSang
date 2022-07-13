@@ -160,6 +160,48 @@ namespace rangdong_agv
                 return agvList;
             }
         }
+        public List<Station> GetStations()
+        {
+            string query = "SELECT * FROM station_inf";
+
+            //Create a list to store the result
+            List<Station> stationList = new List<Station>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    Station agvInfoRead = new Station();
+                    agvInfoRead.id = Convert.ToInt32(dataReader["id"]);
+                    agvInfoRead.line = Convert.ToInt32(dataReader["line_id"]);
+                    agvInfoRead.quantity = Convert.ToInt32(dataReader["quantity"]);
+                    agvInfoRead.status = Convert.ToInt32(dataReader["status"]);
+                    stationList.Add(agvInfoRead);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return stationList;
+            }
+            else
+            {
+                return stationList;
+            }
+        }
+
+
         public List<AgvActiveInMonth> getAgvById(int id)
         {
             string query = "SELECT * FROM month_active_agv WHERE agv_id = " + id + "";

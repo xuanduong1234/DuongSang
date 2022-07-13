@@ -19,8 +19,8 @@ namespace rangdong_agv
         private static int NumOfLevel = 3;
         public string[] PalletCodes = new string[NumOfLevel];
 
-        public static List<RackColumn> ListColumn = RackColumn.GetRackColums();
-        public static List<RackColumn> SimListColumn = RackColumn.GetRackColums();
+        public static List<RackColumn> ListColumn = GetRackColums();
+        public static List<RackColumn> SimListColumn = GetRackColums();
 
         private RackColumn(int atNode)
         {

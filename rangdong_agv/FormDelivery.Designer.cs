@@ -30,39 +30,6 @@ namespace rangdong_agv
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelStationList = new System.Windows.Forms.Panel();
-            this.tableLayoutPanelStationList = new System.Windows.Forms.TableLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.groupBoxStation1 = new System.Windows.Forms.GroupBox();
-            this.btnStnCallAgv1 = new FontAwesome.Sharp.IconButton();
-            this.labelStnMaterialQuantity1 = new System.Windows.Forms.Label();
-            this.labelStnMaterialCode1 = new System.Windows.Forms.Label();
-            this.labelStnLastDeliveryTime1 = new System.Windows.Forms.Label();
-            this.labelStn1Line = new System.Windows.Forms.Label();
-            this.labelStnId1 = new System.Windows.Forms.Label();
-            this.labelStnMaterialStatus1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMaterialDiscard = new System.Windows.Forms.Button();
@@ -89,21 +56,16 @@ namespace rangdong_agv
             this.comboBoxFeedingStation1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnStopAgv = new FontAwesome.Sharp.IconButton();
-            this.btnStartAgv = new FontAwesome.Sharp.IconButton();
+            this.textBoxTest = new System.Windows.Forms.TextBox();
             this.radioButtonAgv3 = new System.Windows.Forms.RadioButton();
             this.radioButtonAgv2 = new System.Windows.Forms.RadioButton();
             this.radioButtonAgv1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxTest = new System.Windows.Forms.TextBox();
+            this.mySqlCommandBuilder1 = new MySqlConnector.MySqlCommandBuilder();
+            this.tblLayoutPanelDelivery = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStopAgv = new FontAwesome.Sharp.IconButton();
+            this.btnStartAgv = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.panelStationList.SuspendLayout();
-            this.tableLayoutPanelStationList.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.groupBoxStation1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -114,466 +76,13 @@ namespace rangdong_agv
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panelStationList);
+            this.panel1.Controls.Add(this.tblLayoutPanelDelivery);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 561);
             this.panel1.TabIndex = 0;
-            // 
-            // panelStationList
-            // 
-            this.panelStationList.AutoScroll = true;
-            this.panelStationList.Controls.Add(this.tableLayoutPanelStationList);
-            this.panelStationList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStationList.Location = new System.Drawing.Point(0, 0);
-            this.panelStationList.Name = "panelStationList";
-            this.panelStationList.Size = new System.Drawing.Size(774, 561);
-            this.panelStationList.TabIndex = 1;
-            // 
-            // tableLayoutPanelStationList
-            // 
-            this.tableLayoutPanelStationList.AutoSize = true;
-            this.tableLayoutPanelStationList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanelStationList.ColumnCount = 4;
-            this.tableLayoutPanelStationList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelStationList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelStationList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelStationList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelStationList.Controls.Add(this.panel12, 3, 1);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel11, 2, 1);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel10, 1, 1);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel8, 3, 0);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel5, 2, 0);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel6, 0, 0);
-            this.tableLayoutPanelStationList.Controls.Add(this.panel7, 1, 0);
-            this.tableLayoutPanelStationList.Controls.Add(this.groupBox4, 0, 1);
-            this.tableLayoutPanelStationList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanelStationList.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelStationList.Name = "tableLayoutPanelStationList";
-            this.tableLayoutPanelStationList.RowCount = 8;
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanelStationList.Size = new System.Drawing.Size(757, 1760);
-            this.tableLayoutPanelStationList.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.AutoScroll = true;
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(570, 223);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(184, 214);
-            this.panel12.TabIndex = 10;
-            // 
-            // panel11
-            // 
-            this.panel11.AutoScroll = true;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(381, 223);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(183, 214);
-            this.panel11.TabIndex = 9;
-            // 
-            // panel10
-            // 
-            this.panel10.AutoScroll = true;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(192, 223);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(183, 214);
-            this.panel10.TabIndex = 8;
-            // 
-            // panel8
-            // 
-            this.panel8.AutoScroll = true;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(570, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(184, 214);
-            this.panel8.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoScroll = true;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(381, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(183, 214);
-            this.panel5.TabIndex = 5;
-            // 
-            // panel6
-            // 
-            this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.groupBoxStation1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(183, 214);
-            this.panel6.TabIndex = 3;
-            // 
-            // groupBoxStation1
-            // 
-            this.groupBoxStation1.AutoSize = true;
-            this.groupBoxStation1.Controls.Add(this.btnStnCallAgv1);
-            this.groupBoxStation1.Controls.Add(this.labelStnMaterialQuantity1);
-            this.groupBoxStation1.Controls.Add(this.labelStnMaterialCode1);
-            this.groupBoxStation1.Controls.Add(this.labelStnLastDeliveryTime1);
-            this.groupBoxStation1.Controls.Add(this.labelStn1Line);
-            this.groupBoxStation1.Controls.Add(this.labelStnId1);
-            this.groupBoxStation1.Controls.Add(this.labelStnMaterialStatus1);
-            this.groupBoxStation1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxStation1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxStation1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.groupBoxStation1.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxStation1.Name = "groupBoxStation1";
-            this.groupBoxStation1.Size = new System.Drawing.Size(183, 189);
-            this.groupBoxStation1.TabIndex = 0;
-            this.groupBoxStation1.TabStop = false;
-            this.groupBoxStation1.Text = "Trạm 1";
-            this.groupBoxStation1.Enter += new System.EventHandler(this.groupBoxStation1_Enter);
-            // 
-            // btnStnCallAgv1
-            // 
-            this.btnStnCallAgv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnStnCallAgv1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStnCallAgv1.FlatAppearance.BorderSize = 0;
-            this.btnStnCallAgv1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnStnCallAgv1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStnCallAgv1.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btnStnCallAgv1.IconChar = FontAwesome.Sharp.IconChar.Caravan;
-            this.btnStnCallAgv1.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnStnCallAgv1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStnCallAgv1.IconSize = 20;
-            this.btnStnCallAgv1.Location = new System.Drawing.Point(3, 156);
-            this.btnStnCallAgv1.Name = "btnStnCallAgv1";
-            this.btnStnCallAgv1.Size = new System.Drawing.Size(177, 30);
-            this.btnStnCallAgv1.TabIndex = 7;
-            this.btnStnCallAgv1.Text = "Call AGV";
-            this.btnStnCallAgv1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStnCallAgv1.UseVisualStyleBackColor = false;
-            this.btnStnCallAgv1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // labelStnMaterialQuantity1
-            // 
-            this.labelStnMaterialQuantity1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStnMaterialQuantity1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.labelStnMaterialQuantity1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStnMaterialQuantity1.Location = new System.Drawing.Point(3, 136);
-            this.labelStnMaterialQuantity1.Name = "labelStnMaterialQuantity1";
-            this.labelStnMaterialQuantity1.Size = new System.Drawing.Size(177, 20);
-            this.labelStnMaterialQuantity1.TabIndex = 4;
-            this.labelStnMaterialQuantity1.Text = "Số lượng:";
-            this.labelStnMaterialQuantity1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelStnMaterialCode1
-            // 
-            this.labelStnMaterialCode1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStnMaterialCode1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.labelStnMaterialCode1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStnMaterialCode1.Location = new System.Drawing.Point(3, 116);
-            this.labelStnMaterialCode1.Name = "labelStnMaterialCode1";
-            this.labelStnMaterialCode1.Size = new System.Drawing.Size(177, 20);
-            this.labelStnMaterialCode1.TabIndex = 8;
-            this.labelStnMaterialCode1.Text = "Mã vật tư:";
-            this.labelStnMaterialCode1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelStnLastDeliveryTime1
-            // 
-            this.labelStnLastDeliveryTime1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStnLastDeliveryTime1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.labelStnLastDeliveryTime1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStnLastDeliveryTime1.Location = new System.Drawing.Point(3, 96);
-            this.labelStnLastDeliveryTime1.Name = "labelStnLastDeliveryTime1";
-            this.labelStnLastDeliveryTime1.Size = new System.Drawing.Size(177, 20);
-            this.labelStnLastDeliveryTime1.TabIndex = 3;
-            this.labelStnLastDeliveryTime1.Text = "Giao cuối:";
-            this.labelStnLastDeliveryTime1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelStn1Line
-            // 
-            this.labelStn1Line.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStn1Line.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.labelStn1Line.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStn1Line.Location = new System.Drawing.Point(3, 76);
-            this.labelStn1Line.Name = "labelStn1Line";
-            this.labelStn1Line.Size = new System.Drawing.Size(177, 20);
-            this.labelStn1Line.TabIndex = 5;
-            this.labelStn1Line.Text = "Line:";
-            this.labelStn1Line.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelStnId1
-            // 
-            this.labelStnId1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStnId1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.labelStnId1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStnId1.Location = new System.Drawing.Point(3, 57);
-            this.labelStnId1.Name = "labelStnId1";
-            this.labelStnId1.Size = new System.Drawing.Size(177, 19);
-            this.labelStnId1.TabIndex = 6;
-            this.labelStnId1.Text = "ID:";
-            this.labelStnId1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelStnMaterialStatus1
-            // 
-            this.labelStnMaterialStatus1.BackColor = System.Drawing.Color.SeaGreen;
-            this.labelStnMaterialStatus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelStnMaterialStatus1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelStnMaterialStatus1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelStnMaterialStatus1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStnMaterialStatus1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelStnMaterialStatus1.Location = new System.Drawing.Point(3, 23);
-            this.labelStnMaterialStatus1.Name = "labelStnMaterialStatus1";
-            this.labelStnMaterialStatus1.Size = new System.Drawing.Size(177, 34);
-            this.labelStnMaterialStatus1.TabIndex = 0;
-            this.labelStnMaterialStatus1.Text = "Còn vật tư";
-            this.labelStnMaterialStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.AutoScroll = true;
-            this.panel7.Controls.Add(this.groupBox1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(192, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(183, 214);
-            this.panel7.TabIndex = 4;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.iconButton1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 189);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Trạm 2";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Caravan;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(3, 156);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(177, 30);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Call AGV";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(3, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Số lượng:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(3, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Mã vật tư:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(3, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Giao cuối:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(3, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Line:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(3, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "ID:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Firebrick;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(3, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(177, 34);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Sắp hết vật tư";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.iconButton2);
-            this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.groupBox4.Location = new System.Drawing.Point(3, 223);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(183, 189);
-            this.groupBox4.TabIndex = 13;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Trạm 1";
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Caravan;
-            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(3, 156);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(177, 30);
-            this.iconButton2.TabIndex = 7;
-            this.iconButton2.Text = "Call AGV";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // label19
-            // 
-            this.label19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label19.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label19.Location = new System.Drawing.Point(3, 136);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(177, 20);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Số lượng:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label20
-            // 
-            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label20.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label20.Location = new System.Drawing.Point(3, 116);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(177, 20);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "Mã vật tư:";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label21
-            // 
-            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label21.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label21.Location = new System.Drawing.Point(3, 96);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(177, 20);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Giao cuối:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label22
-            // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label22.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label22.Location = new System.Drawing.Point(3, 76);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(177, 20);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Line:";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label23
-            // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label23.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label23.Location = new System.Drawing.Point(3, 57);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(177, 19);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "ID:";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.SeaGreen;
-            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label24.Location = new System.Drawing.Point(3, 23);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(177, 34);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Còn vật tư";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -609,7 +118,7 @@ namespace rangdong_agv
             this.btnMaterialDiscard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterialDiscard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialDiscard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaterialDiscard.Location = new System.Drawing.Point(167, 479);
+            this.btnMaterialDiscard.Location = new System.Drawing.Point(167, 1769);
             this.btnMaterialDiscard.Name = "btnMaterialDiscard";
             this.btnMaterialDiscard.Size = new System.Drawing.Size(80, 40);
             this.btnMaterialDiscard.TabIndex = 13;
@@ -625,7 +134,7 @@ namespace rangdong_agv
             this.btnMaterialApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterialApply.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialApply.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaterialApply.Location = new System.Drawing.Point(9, 476);
+            this.btnMaterialApply.Location = new System.Drawing.Point(10, 1769);
             this.btnMaterialApply.Name = "btnMaterialApply";
             this.btnMaterialApply.Size = new System.Drawing.Size(80, 40);
             this.btnMaterialApply.TabIndex = 12;
@@ -756,10 +265,7 @@ namespace rangdong_agv
             this.comboBoxFeedingStation2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFeedingStation2.FormattingEnabled = true;
             this.comboBoxFeedingStation2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "1"});
             this.comboBoxFeedingStation2.Location = new System.Drawing.Point(106, 96);
             this.comboBoxFeedingStation2.Name = "comboBoxFeedingStation2";
             this.comboBoxFeedingStation2.Size = new System.Drawing.Size(120, 29);
@@ -888,10 +394,7 @@ namespace rangdong_agv
             this.comboBoxFeedingStation1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFeedingStation1.FormattingEnabled = true;
             this.comboBoxFeedingStation1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "1"});
             this.comboBoxFeedingStation1.Location = new System.Drawing.Point(109, 99);
             this.comboBoxFeedingStation1.Name = "comboBoxFeedingStation1";
             this.comboBoxFeedingStation1.Size = new System.Drawing.Size(120, 29);
@@ -926,47 +429,13 @@ namespace rangdong_agv
             this.panel4.Size = new System.Drawing.Size(250, 300);
             this.panel4.TabIndex = 1;
             // 
-            // btnStopAgv
+            // textBoxTest
             // 
-            this.btnStopAgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStopAgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnStopAgv.FlatAppearance.BorderSize = 0;
-            this.btnStopAgv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnStopAgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStopAgv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopAgv.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStopAgv.IconChar = FontAwesome.Sharp.IconChar.Stop;
-            this.btnStopAgv.IconColor = System.Drawing.Color.Firebrick;
-            this.btnStopAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStopAgv.IconSize = 20;
-            this.btnStopAgv.Location = new System.Drawing.Point(167, 249);
-            this.btnStopAgv.Name = "btnStopAgv";
-            this.btnStopAgv.Size = new System.Drawing.Size(80, 45);
-            this.btnStopAgv.TabIndex = 5;
-            this.btnStopAgv.Text = "Stop";
-            this.btnStopAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStopAgv.UseVisualStyleBackColor = false;
-            // 
-            // btnStartAgv
-            // 
-            this.btnStartAgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStartAgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnStartAgv.FlatAppearance.BorderSize = 0;
-            this.btnStartAgv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnStartAgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartAgv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartAgv.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStartAgv.IconChar = FontAwesome.Sharp.IconChar.Play;
-            this.btnStartAgv.IconColor = System.Drawing.Color.SeaGreen;
-            this.btnStartAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStartAgv.IconSize = 20;
-            this.btnStartAgv.Location = new System.Drawing.Point(10, 249);
-            this.btnStartAgv.Name = "btnStartAgv";
-            this.btnStartAgv.Size = new System.Drawing.Size(80, 45);
-            this.btnStartAgv.TabIndex = 4;
-            this.btnStartAgv.Text = "Start";
-            this.btnStartAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStartAgv.UseVisualStyleBackColor = false;
+            this.textBoxTest.Location = new System.Drawing.Point(6, 138);
+            this.textBoxTest.Multiline = true;
+            this.textBoxTest.Name = "textBoxTest";
+            this.textBoxTest.Size = new System.Drawing.Size(241, 92);
+            this.textBoxTest.TabIndex = 6;
             // 
             // radioButtonAgv3
             // 
@@ -1028,13 +497,71 @@ namespace rangdong_agv
             this.label1.Text = "Quản lý xe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxTest
+            // mySqlCommandBuilder1
             // 
-            this.textBoxTest.Location = new System.Drawing.Point(6, 138);
-            this.textBoxTest.Multiline = true;
-            this.textBoxTest.Name = "textBoxTest";
-            this.textBoxTest.Size = new System.Drawing.Size(241, 92);
-            this.textBoxTest.TabIndex = 6;
+            this.mySqlCommandBuilder1.DataAdapter = null;
+            this.mySqlCommandBuilder1.QuotePrefix = "`";
+            this.mySqlCommandBuilder1.QuoteSuffix = "`";
+            // 
+            // tblLayoutPanelDelivery
+            // 
+            this.tblLayoutPanelDelivery.AutoScroll = true;
+            this.tblLayoutPanelDelivery.ColumnCount = 4;
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tblLayoutPanelDelivery.Location = new System.Drawing.Point(0, 0);
+            this.tblLayoutPanelDelivery.Name = "tblLayoutPanelDelivery";
+            this.tblLayoutPanelDelivery.RowCount = 3;
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayoutPanelDelivery.Size = new System.Drawing.Size(774, 558);
+            this.tblLayoutPanelDelivery.TabIndex = 1;
+            // 
+            // btnStopAgv
+            // 
+            this.btnStopAgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStopAgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnStopAgv.FlatAppearance.BorderSize = 0;
+            this.btnStopAgv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnStopAgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStopAgv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopAgv.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnStopAgv.IconChar = FontAwesome.Sharp.IconChar.Stop;
+            this.btnStopAgv.IconColor = System.Drawing.Color.Firebrick;
+            this.btnStopAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStopAgv.IconSize = 20;
+            this.btnStopAgv.Location = new System.Drawing.Point(167, 249);
+            this.btnStopAgv.Name = "btnStopAgv";
+            this.btnStopAgv.Size = new System.Drawing.Size(80, 45);
+            this.btnStopAgv.TabIndex = 5;
+            this.btnStopAgv.Text = "Stop";
+            this.btnStopAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStopAgv.UseVisualStyleBackColor = false;
+            // 
+            // btnStartAgv
+            // 
+            this.btnStartAgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStartAgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnStartAgv.FlatAppearance.BorderSize = 0;
+            this.btnStartAgv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnStartAgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartAgv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartAgv.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnStartAgv.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.btnStartAgv.IconColor = System.Drawing.Color.SeaGreen;
+            this.btnStartAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStartAgv.IconSize = 20;
+            this.btnStartAgv.Location = new System.Drawing.Point(10, 249);
+            this.btnStartAgv.Name = "btnStartAgv";
+            this.btnStartAgv.Size = new System.Drawing.Size(80, 45);
+            this.btnStartAgv.TabIndex = 4;
+            this.btnStartAgv.Text = "Start";
+            this.btnStartAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStartAgv.UseVisualStyleBackColor = false;
             // 
             // FormDelivery
             // 
@@ -1046,16 +573,6 @@ namespace rangdong_agv
             this.Name = "FormDelivery";
             this.Text = "Delivery";
             this.panel1.ResumeLayout(false);
-            this.panelStationList.ResumeLayout(false);
-            this.panelStationList.PerformLayout();
-            this.tableLayoutPanelStationList.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.groupBoxStation1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1071,38 +588,13 @@ namespace rangdong_agv
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelStationList;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStationList;
-        private System.Windows.Forms.Label labelStnMaterialStatus1;
-        private System.Windows.Forms.Label labelStnLastDeliveryTime1;
-        private System.Windows.Forms.Label labelStnMaterialQuantity1;
-        private System.Windows.Forms.Label labelStn1Line;
-        private System.Windows.Forms.GroupBox groupBoxStation1;
-        private System.Windows.Forms.Label labelStnId1;
-        private System.Windows.Forms.Panel panel6;
-        private FontAwesome.Sharp.IconButton btnStnCallAgv1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label labelStnMaterialCode1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButtonAgv1;
         private System.Windows.Forms.RadioButton radioButtonAgv3;
         private System.Windows.Forms.RadioButton radioButtonAgv2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconButton btnStartAgv;
         private FontAwesome.Sharp.IconButton btnStopAgv;
         private System.Windows.Forms.Label label8;
@@ -1125,17 +617,11 @@ namespace rangdong_agv
         private System.Windows.Forms.ComboBox comboBoxFeedingMaterialCode1;
         private System.Windows.Forms.Button btnMaterialDiscard;
         private System.Windows.Forms.Button btnMaterialApply;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button btnFeedingClear1;
         private System.Windows.Forms.Button btnFeedingClear2;
         private System.Windows.Forms.ComboBox comboBoxFeedingMaterialCode2;
         private System.Windows.Forms.TextBox textBoxTest;
+        private MySqlConnector.MySqlCommandBuilder mySqlCommandBuilder1;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutPanelDelivery;
     }
 }

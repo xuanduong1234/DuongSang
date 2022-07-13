@@ -523,6 +523,8 @@ namespace rangdong_agv
         private void btnError_Click(object sender, EventArgs e)
         {
             this.openChildForm(formError);
+            
         }
+        
     }
 }

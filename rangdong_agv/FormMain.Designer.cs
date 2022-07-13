@@ -33,6 +33,19 @@ namespace rangdong_agv
             this.panelButtons = new System.Windows.Forms.Panel();
             this.btnChart = new System.Windows.Forms.Button();
             this.txtBoxRxMsgTest = new System.Windows.Forms.TextBox();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelConnection = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBoxComPort = new System.Windows.Forms.ComboBox();
+            this.labelComPort = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnDisconnect = new FontAwesome.Sharp.IconButton();
+            this.btnConnect = new FontAwesome.Sharp.IconButton();
+            this.iconNetwork = new FontAwesome.Sharp.IconPictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnError = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.btnSettings = new FontAwesome.Sharp.IconButton();
@@ -40,28 +53,15 @@ namespace rangdong_agv
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.btnDelivery = new FontAwesome.Sharp.IconButton();
             this.btnOverview = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.panelConnection = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDisconnect = new FontAwesome.Sharp.IconButton();
-            this.btnConnect = new FontAwesome.Sharp.IconButton();
-            this.comboBoxComPort = new System.Windows.Forms.ComboBox();
-            this.labelComPort = new System.Windows.Forms.Label();
-            this.iconNetwork = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnError = new FontAwesome.Sharp.IconButton();
             this.panelButtons.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelConnection.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelButtons
@@ -109,6 +109,194 @@ namespace rangdong_agv
             this.txtBoxRxMsgTest.Name = "txtBoxRxMsgTest";
             this.txtBoxRxMsgTest.Size = new System.Drawing.Size(220, 157);
             this.txtBoxRxMsgTest.TabIndex = 2;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Controls.Add(this.pictureBoxLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 100);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // panelConnection
+            // 
+            this.panelConnection.Controls.Add(this.tableLayoutPanel1);
+            this.panelConnection.Controls.Add(this.panel1);
+            this.panelConnection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConnection.Location = new System.Drawing.Point(220, 0);
+            this.panelConnection.Name = "panelConnection";
+            this.panelConnection.Size = new System.Drawing.Size(1044, 100);
+            this.panelConnection.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnDisconnect, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxComPort, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelComPort, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconNetwork, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(664, 100);
+            this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // comboBoxComPort
+            // 
+            this.comboBoxComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBoxComPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.comboBoxComPort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxComPort.ForeColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxComPort.FormattingEnabled = true;
+            this.comboBoxComPort.Location = new System.Drawing.Point(138, 35);
+            this.comboBoxComPort.Name = "comboBoxComPort";
+            this.comboBoxComPort.Size = new System.Drawing.Size(160, 29);
+            this.comboBoxComPort.TabIndex = 2;
+            // 
+            // labelComPort
+            // 
+            this.labelComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelComPort.AutoSize = true;
+            this.labelComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelComPort.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelComPort.Location = new System.Drawing.Point(43, 39);
+            this.labelComPort.Name = "labelComPort";
+            this.labelComPort.Size = new System.Drawing.Size(87, 21);
+            this.labelComPort.TabIndex = 3;
+            this.labelComPort.Text = "COM Port";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.labelUsername);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(664, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(380, 100);
+            this.panel1.TabIndex = 7;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelUsername.Location = new System.Drawing.Point(71, 33);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(200, 30);
+            this.labelUsername.TabIndex = 1;
+            this.labelUsername.Text = "Admin";
+            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(220, 100);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1044, 649);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnDisconnect.FlatAppearance.BorderSize = 0;
+            this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisconnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisconnect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDisconnect.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDisconnect.IconColor = System.Drawing.Color.Black;
+            this.btnDisconnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDisconnect.Location = new System.Drawing.Point(458, 35);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(120, 29);
+            this.btnDisconnect.TabIndex = 6;
+            this.btnDisconnect.Text = "&Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = false;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnConnect.FlatAppearance.BorderSize = 0;
+            this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnConnect.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnConnect.IconColor = System.Drawing.Color.Black;
+            this.btnConnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnect.Location = new System.Drawing.Point(318, 35);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(120, 29);
+            this.btnConnect.TabIndex = 5;
+            this.btnConnect.Text = "&Connect";
+            this.btnConnect.UseVisualStyleBackColor = false;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // iconNetwork
+            // 
+            this.iconNetwork.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.iconNetwork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
+            this.iconNetwork.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconNetwork.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
+            this.iconNetwork.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconNetwork.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconNetwork.Location = new System.Drawing.Point(3, 34);
+            this.iconNetwork.Name = "iconNetwork";
+            this.iconNetwork.Size = new System.Drawing.Size(32, 32);
+            this.iconNetwork.TabIndex = 4;
+            this.iconNetwork.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Location = new System.Drawing.Point(277, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnError
+            // 
+            this.btnError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnError.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnError.FlatAppearance.BorderSize = 0;
+            this.btnError.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnError.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnError.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnError.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.btnError.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnError.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnError.IconSize = 32;
+            this.btnError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnError.Location = new System.Drawing.Point(0, 478);
+            this.btnError.Name = "btnError";
+            this.btnError.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnError.Size = new System.Drawing.Size(220, 54);
+            this.btnError.TabIndex = 8;
+            this.btnError.Text = "Lỗi";
+            this.btnError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnError.UseVisualStyleBackColor = false;
+            this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnExit
             // 
@@ -291,203 +479,16 @@ namespace rangdong_agv
             this.btnOverview.UseVisualStyleBackColor = false;
             this.btnOverview.Click += new System.EventHandler(this.btnOverview_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelLogo.Controls.Add(this.pictureBoxLogo);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 100);
-            this.panelLogo.TabIndex = 1;
-            // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 12);
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxLogo.Image = global::rangdong_agv.Properties.Resources.bachkhoa;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(214, 82);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(220, 100);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
-            // 
-            // panelConnection
-            // 
-            this.panelConnection.Controls.Add(this.tableLayoutPanel1);
-            this.panelConnection.Controls.Add(this.panel1);
-            this.panelConnection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConnection.Location = new System.Drawing.Point(220, 0);
-            this.panelConnection.Name = "panelConnection";
-            this.panelConnection.Size = new System.Drawing.Size(1044, 100);
-            this.panelConnection.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnDisconnect, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBoxComPort, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelComPort, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.iconNetwork, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(664, 100);
-            this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // btnDisconnect
-            // 
-            this.btnDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnDisconnect.FlatAppearance.BorderSize = 0;
-            this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisconnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisconnect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDisconnect.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnDisconnect.IconColor = System.Drawing.Color.Black;
-            this.btnDisconnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDisconnect.Location = new System.Drawing.Point(458, 35);
-            this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(120, 29);
-            this.btnDisconnect.TabIndex = 6;
-            this.btnDisconnect.Text = "&Disconnect";
-            this.btnDisconnect.UseVisualStyleBackColor = false;
-            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnConnect.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnConnect.IconColor = System.Drawing.Color.Black;
-            this.btnConnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnect.Location = new System.Drawing.Point(318, 35);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(120, 29);
-            this.btnConnect.TabIndex = 5;
-            this.btnConnect.Text = "&Connect";
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
-            // comboBoxComPort
-            // 
-            this.comboBoxComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBoxComPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.comboBoxComPort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxComPort.ForeColor = System.Drawing.Color.Gainsboro;
-            this.comboBoxComPort.FormattingEnabled = true;
-            this.comboBoxComPort.Location = new System.Drawing.Point(138, 35);
-            this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(160, 29);
-            this.comboBoxComPort.TabIndex = 2;
-            // 
-            // labelComPort
-            // 
-            this.labelComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelComPort.AutoSize = true;
-            this.labelComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComPort.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelComPort.Location = new System.Drawing.Point(43, 39);
-            this.labelComPort.Name = "labelComPort";
-            this.labelComPort.Size = new System.Drawing.Size(87, 21);
-            this.labelComPort.TabIndex = 3;
-            this.labelComPort.Text = "COM Port";
-            // 
-            // iconNetwork
-            // 
-            this.iconNetwork.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.iconNetwork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
-            this.iconNetwork.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconNetwork.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
-            this.iconNetwork.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconNetwork.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconNetwork.Location = new System.Drawing.Point(3, 34);
-            this.iconNetwork.Name = "iconNetwork";
-            this.iconNetwork.Size = new System.Drawing.Size(32, 32);
-            this.iconNetwork.TabIndex = 4;
-            this.iconNetwork.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.labelUsername);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(664, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 100);
-            this.panel1.TabIndex = 7;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(277, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelUsername.Location = new System.Drawing.Point(71, 33);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(200, 30);
-            this.labelUsername.TabIndex = 1;
-            this.labelUsername.Text = "Admin";
-            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(220, 100);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1044, 649);
-            this.panelChildForm.TabIndex = 2;
-            // 
-            // btnError
-            // 
-            this.btnError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnError.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnError.FlatAppearance.BorderSize = 0;
-            this.btnError.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnError.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnError.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnError.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.btnError.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnError.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnError.IconSize = 32;
-            this.btnError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnError.Location = new System.Drawing.Point(0, 478);
-            this.btnError.Name = "btnError";
-            this.btnError.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnError.Size = new System.Drawing.Size(220, 54);
-            this.btnError.TabIndex = 8;
-            this.btnError.Text = "Lỗi";
-            this.btnError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnError.UseVisualStyleBackColor = false;
-            this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // FormMain
             // 
@@ -508,14 +509,14 @@ namespace rangdong_agv
             this.panelButtons.ResumeLayout(false);
             this.panelButtons.PerformLayout();
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelConnection.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,7 +526,6 @@ namespace rangdong_agv
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnOverview;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelConnection;
         private FontAwesome.Sharp.IconButton btnSchedule;
         private FontAwesome.Sharp.IconButton btnReport;
@@ -546,5 +546,6 @@ namespace rangdong_agv
         private FontAwesome.Sharp.IconButton btnSettings;
         private System.Windows.Forms.Button btnChart;
         private FontAwesome.Sharp.IconButton btnError;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

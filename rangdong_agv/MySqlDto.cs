@@ -160,5 +160,26 @@ namespace rangdong_agv
 
         public int controlMode { get; set; }
     }
+    public class Station
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int line { get; set; }
+        public  string material_code { get; set; }
+        public int quantity { get; set; }
+        public int status { get; set; }
+        /*public Station(int id, string name, int line, string material_code, int quantity, int status)
+        {
+            this.id = id;
+            this.name = name;
+            this.line = line;
+            this.material_code = material_code;
+            this.quantity = quantity;
+            this.status = status;
+
+        }*/
+
+    }
+    
 
 }

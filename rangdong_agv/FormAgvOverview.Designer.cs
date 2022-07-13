@@ -33,6 +33,7 @@ namespace rangdong_agv
             this.panelSummary = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelSession = new System.Windows.Forms.Label();
+            this.labelTimes = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -96,11 +97,10 @@ namespace rangdong_agv
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAgv2 = new FontAwesome.Sharp.IconButton();
             this.btnAgv1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnAgv3 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAgvList = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelTimes = new System.Windows.Forms.Label();
             this.panelSummary.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -146,6 +146,18 @@ namespace rangdong_agv
             this.labelSession.Size = new System.Drawing.Size(174, 30);
             this.labelSession.TabIndex = 20;
             this.labelSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelTimes
+            // 
+            this.labelTimes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTimes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTimes.Location = new System.Drawing.Point(69, 33);
+            this.labelTimes.Name = "labelTimes";
+            this.labelTimes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelTimes.Size = new System.Drawing.Size(178, 30);
+            this.labelTimes.TabIndex = 18;
+            this.labelTimes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
             // 
@@ -942,7 +954,7 @@ namespace rangdong_agv
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Controls.Add(this.btnAgv2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnAgv1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.iconButton1, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAgv3, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1002,29 +1014,29 @@ namespace rangdong_agv
             this.btnAgv1.UseVisualStyleBackColor = false;
             this.btnAgv1.Click += new System.EventHandler(this.btnAgv1_Click);
             // 
-            // iconButton1
+            // btnAgv3
             // 
-            this.iconButton1.AutoSize = true;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TruckMoving;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 100;
-            this.iconButton1.Location = new System.Drawing.Point(515, 133);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(122, 124);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "AGV3";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnAgv3.AutoSize = true;
+            this.btnAgv3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgv3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAgv3.FlatAppearance.BorderSize = 0;
+            this.btnAgv3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnAgv3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgv3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgv3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAgv3.IconChar = FontAwesome.Sharp.IconChar.TruckMoving;
+            this.btnAgv3.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAgv3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgv3.IconSize = 100;
+            this.btnAgv3.Location = new System.Drawing.Point(515, 133);
+            this.btnAgv3.Name = "btnAgv3";
+            this.btnAgv3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnAgv3.Size = new System.Drawing.Size(122, 124);
+            this.btnAgv3.TabIndex = 2;
+            this.btnAgv3.Text = "AGV3";
+            this.btnAgv3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAgv3.UseVisualStyleBackColor = false;
+            this.btnAgv3.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label1
             // 
@@ -1055,18 +1067,6 @@ namespace rangdong_agv
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // labelTimes
-            // 
-            this.labelTimes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTimes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTimes.Location = new System.Drawing.Point(69, 33);
-            this.labelTimes.Name = "labelTimes";
-            this.labelTimes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.labelTimes.Size = new System.Drawing.Size(178, 30);
-            this.labelTimes.TabIndex = 18;
-            this.labelTimes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormAgvOverview
             // 
@@ -1115,7 +1115,7 @@ namespace rangdong_agv
         private System.Windows.Forms.Panel panelAgvList;
         private FontAwesome.Sharp.IconButton btnAgv1;
         private FontAwesome.Sharp.IconButton btnAgv2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnAgv3;
         private System.Windows.Forms.Label labelZone;
         private System.Windows.Forms.Label labelZoneValue;
         private System.Windows.Forms.Label labelState;
