@@ -79,6 +79,7 @@ namespace rangdong_agv
             this.btnStnCallAgv1.Text = "Call AGV";
             this.btnStnCallAgv1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStnCallAgv1.UseVisualStyleBackColor = false;
+            this.btnStnCallAgv1.Click += new System.EventHandler(this.btnStnCallAgv1_Click);
             // 
             // labelStnMaterialQuantity1
             // 

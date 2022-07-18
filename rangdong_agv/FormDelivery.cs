@@ -14,17 +14,14 @@ using System.IO;
 namespace rangdong_agv
 {
     public partial class FormDelivery : Form
-    {
-        MySqlDAO sqlDAO = new MySqlDAO();
+    {      
         private int agvIdSelected;
         private AgvInfo agvInfo;
         private AgvParams agvParams;
         //private FormMain formMain;
-        private SerialPort comport1;
-        public List<UserControl1> UserControls;
+        private SerialPort comport1;      
         //List<Station> Sta = new List<Station>();
-        public List<Station> stations;
-
+        
         public FormDelivery()
         {
             InitializeComponent();
@@ -43,61 +40,15 @@ namespace rangdong_agv
             //this.formMain = new FormMain();
             this.agvIdSelected = 0x01;
             this.comport1 = _comPort;
+          
 
             MySqlDAO sqlDAO = new MySqlDAO();
             //var data = sqlDAO.GetStations();
             //var lis = new UserControl1[data.Count];
             List<Station> Sta = sqlDAO.GetStations();
             AddStations(Sta);
+            
         }
-        // User Control lay so tram tu CSDL
-        void AddStations(List<Station> list)
-        {
-            int c = 0, r = 0;
-            foreach (Station s in list)
-            {
-                UserControl1 u = new UserControl1();
-                u.AddStation(s);
-                //u.Location = new System.Drawing.Point(1, 1);
-                tblLayoutPanelDelivery.Controls.Add(u, c, r);
-                c++;
-                if (c > 3)
-                {
-                    c = 0;
-                    r++;
-                }
-
-            }
-            ////UserControl1[] pro = { new UserControl1(), new UserControl1(), new UserControl1(), new UserControl1(),
-            ////new UserControl1(), new UserControl1(), new UserControl1(), new UserControl1(),
-            ////new UserControl1(), new UserControl1(), new UserControl1(), new UserControl1(),
-            ////new UserControl1(), new UserControl1(), new UserControl1(), new UserControl1(),};
-
-            //int c = 0, r = 0;
-            //for (int i = 0; i < pro.Length; i++)
-            //{
-            //    tblLayoutPanelDelivery.Controls.Add(pro[i], c, r);
-
-            //    c++;
-            //    if (c > 3)
-            //    {
-            //        c = 0;
-            //        r++;
-            //    }
-            //}
-        }
-
-       
-       
-        //public FormDelivery(FormMain _formMain)
-        //{
-        //    InitializeComponent();
-        //    this.agvInfo = new AgvInfo();
-        //    this.formMain = _formMain;
-        //    this.agvParams = _formMain.AgvParams;
-        //    this.agvIdSelected = 0x01;
-        //}
-
         private void updateFeedingDeliveryStation(string deliveryStationId)
         {
             if (this.labelFeedingDeliveryStation1.Text.Length == 0 ^ this.labelFeedingDeliveryStation1.Text.Contains("N/A"))
@@ -120,13 +71,47 @@ namespace rangdong_agv
 
                 }
             }
+        }   
+        // User Control lay so tram tu CSDL
+        void AddStations(List<Station> list)
+        {
+            int c = 0, r = 0;
+            foreach (Station s in list)
+            {
+                UserControl1 u = new UserControl1();               
+                u.AddStation(s);
+                //u.btnStnCallAgv1_Click(s);
+                u.SendData = new UserControl1.SendFormDelivery(updateFeedingDeliveryStation);
+
+                //u.Location = new System.Drawing.Point(1, 1);
+                tblLayoutPanelDelivery.Controls.Add(u, c, r);
+                c++;
+                if (c > 3)
+                {
+                    c = 0;
+                    r++;
+                }
+            }           
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            string deliveryStationId = "1";
-            this.updateFeedingDeliveryStation(deliveryStationId);   
-        }
+
+
+        //public FormDelivery(FormMain _formMain)
+        //{
+        //    InitializeComponent();
+        //    this.agvInfo = new AgvInfo();
+        //    this.formMain = _formMain;
+        //    this.agvParams = _formMain.AgvParams;
+        //    this.agvIdSelected = 0x01;
+        //}
+
+
+
+        //private void iconbutton1_click(object sender, eventargs e)
+        //{
+        //    string deliverystationid = "1";
+        //    this.updatefeedingdeliverystation(deliverystationid);
+        //}
 
         private void groupBoxStation1_Enter(object sender, EventArgs e)
         {

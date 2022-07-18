@@ -13,7 +13,8 @@ namespace rangdong_agv
 {
     public partial class UserControl1 : UserControl
     {
-        
+        public delegate void SendFormDelivery(string deliveryStationId);
+        public SendFormDelivery SendData;
         public UserControl1()
         {
             InitializeComponent();
@@ -25,7 +26,24 @@ namespace rangdong_agv
             labelStnId1.Text = "ID: " + s.id.ToString();
             labelStnMaterialCode1.Text = "Mã vật tư: " + s.material_code;
             labelStnMaterialQuantity1.Text = "Số lượng: " + s.quantity.ToString();
+            string station = s.id.ToString();
             
         }
+
+        private void btnStnCallAgv1_Click(object sender, EventArgs e)
+        {
+
+            SendData(groupBoxStation1.Text);
+        }
+
+        //public void btnStnCallAgv1_Click(Station e)
+        //{          
+        //        SendData(e.id.ToString());               
+        //}
+        //private void btnSend_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
     }
 }

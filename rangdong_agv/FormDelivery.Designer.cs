@@ -30,6 +30,7 @@ namespace rangdong_agv
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tblLayoutPanelDelivery = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMaterialDiscard = new System.Windows.Forms.Button();
@@ -57,14 +58,13 @@ namespace rangdong_agv
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxTest = new System.Windows.Forms.TextBox();
+            this.btnStopAgv = new FontAwesome.Sharp.IconButton();
+            this.btnStartAgv = new FontAwesome.Sharp.IconButton();
             this.radioButtonAgv3 = new System.Windows.Forms.RadioButton();
             this.radioButtonAgv2 = new System.Windows.Forms.RadioButton();
             this.radioButtonAgv1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.mySqlCommandBuilder1 = new MySqlConnector.MySqlCommandBuilder();
-            this.tblLayoutPanelDelivery = new System.Windows.Forms.TableLayoutPanel();
-            this.btnStopAgv = new FontAwesome.Sharp.IconButton();
-            this.btnStartAgv = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,6 +83,24 @@ namespace rangdong_agv
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 561);
             this.panel1.TabIndex = 0;
+            // 
+            // tblLayoutPanelDelivery
+            // 
+            this.tblLayoutPanelDelivery.AutoScroll = true;
+            this.tblLayoutPanelDelivery.ColumnCount = 4;
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayoutPanelDelivery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tblLayoutPanelDelivery.Location = new System.Drawing.Point(0, 0);
+            this.tblLayoutPanelDelivery.Name = "tblLayoutPanelDelivery";
+            this.tblLayoutPanelDelivery.RowCount = 3;
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayoutPanelDelivery.Size = new System.Drawing.Size(774, 558);
+            this.tblLayoutPanelDelivery.TabIndex = 1;
             // 
             // panel2
             // 
@@ -437,90 +455,6 @@ namespace rangdong_agv
             this.textBoxTest.Size = new System.Drawing.Size(241, 92);
             this.textBoxTest.TabIndex = 6;
             // 
-            // radioButtonAgv3
-            // 
-            this.radioButtonAgv3.AutoSize = true;
-            this.radioButtonAgv3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButtonAgv3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAgv3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButtonAgv3.Location = new System.Drawing.Point(0, 90);
-            this.radioButtonAgv3.Name = "radioButtonAgv3";
-            this.radioButtonAgv3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonAgv3.Size = new System.Drawing.Size(250, 25);
-            this.radioButtonAgv3.TabIndex = 3;
-            this.radioButtonAgv3.TabStop = true;
-            this.radioButtonAgv3.Text = "Agv3 sẵn sàng";
-            this.radioButtonAgv3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.radioButtonAgv3.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAgv2
-            // 
-            this.radioButtonAgv2.AutoSize = true;
-            this.radioButtonAgv2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButtonAgv2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAgv2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.radioButtonAgv2.Location = new System.Drawing.Point(0, 65);
-            this.radioButtonAgv2.Name = "radioButtonAgv2";
-            this.radioButtonAgv2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonAgv2.Size = new System.Drawing.Size(250, 25);
-            this.radioButtonAgv2.TabIndex = 2;
-            this.radioButtonAgv2.TabStop = true;
-            this.radioButtonAgv2.Text = "Agv2 đang giao hàng";
-            this.radioButtonAgv2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.radioButtonAgv2.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAgv1
-            // 
-            this.radioButtonAgv1.AutoSize = true;
-            this.radioButtonAgv1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButtonAgv1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAgv1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.radioButtonAgv1.Location = new System.Drawing.Point(0, 40);
-            this.radioButtonAgv1.Name = "radioButtonAgv1";
-            this.radioButtonAgv1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radioButtonAgv1.Size = new System.Drawing.Size(250, 25);
-            this.radioButtonAgv1.TabIndex = 1;
-            this.radioButtonAgv1.TabStop = true;
-            this.radioButtonAgv1.Text = "Agv1 đang giao hàng";
-            this.radioButtonAgv1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.radioButtonAgv1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý xe";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mySqlCommandBuilder1
-            // 
-            this.mySqlCommandBuilder1.DataAdapter = null;
-            this.mySqlCommandBuilder1.QuotePrefix = "`";
-            this.mySqlCommandBuilder1.QuoteSuffix = "`";
-            // 
-            // tblLayoutPanelDelivery
-            // 
-            this.tblLayoutPanelDelivery.AutoScroll = true;
-            this.tblLayoutPanelDelivery.ColumnCount = 4;
-            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayoutPanelDelivery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tblLayoutPanelDelivery.Location = new System.Drawing.Point(0, 0);
-            this.tblLayoutPanelDelivery.Name = "tblLayoutPanelDelivery";
-            this.tblLayoutPanelDelivery.RowCount = 3;
-            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
-            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblLayoutPanelDelivery.Size = new System.Drawing.Size(774, 558);
-            this.tblLayoutPanelDelivery.TabIndex = 1;
-            // 
             // btnStopAgv
             // 
             this.btnStopAgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -562,6 +496,72 @@ namespace rangdong_agv
             this.btnStartAgv.Text = "Start";
             this.btnStartAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStartAgv.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonAgv3
+            // 
+            this.radioButtonAgv3.AutoSize = true;
+            this.radioButtonAgv3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButtonAgv3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAgv3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.radioButtonAgv3.Location = new System.Drawing.Point(0, 90);
+            this.radioButtonAgv3.Name = "radioButtonAgv3";
+            this.radioButtonAgv3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv3.Size = new System.Drawing.Size(250, 25);
+            this.radioButtonAgv3.TabIndex = 3;
+            this.radioButtonAgv3.TabStop = true;
+            this.radioButtonAgv3.Text = "Agv3 sẵn sàng";
+            this.radioButtonAgv3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.radioButtonAgv3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAgv2
+            // 
+            this.radioButtonAgv2.AutoSize = true;
+            this.radioButtonAgv2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButtonAgv2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAgv2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.radioButtonAgv2.Location = new System.Drawing.Point(0, 65);
+            this.radioButtonAgv2.Name = "radioButtonAgv2";
+            this.radioButtonAgv2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv2.Size = new System.Drawing.Size(250, 25);
+            this.radioButtonAgv2.TabIndex = 2;
+            this.radioButtonAgv2.TabStop = true;
+            this.radioButtonAgv2.Text = "Agv2 sẵn sàng";
+            this.radioButtonAgv2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.radioButtonAgv2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAgv1
+            // 
+            this.radioButtonAgv1.AutoSize = true;
+            this.radioButtonAgv1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButtonAgv1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAgv1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.radioButtonAgv1.Location = new System.Drawing.Point(0, 40);
+            this.radioButtonAgv1.Name = "radioButtonAgv1";
+            this.radioButtonAgv1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv1.Size = new System.Drawing.Size(250, 25);
+            this.radioButtonAgv1.TabIndex = 1;
+            this.radioButtonAgv1.TabStop = true;
+            this.radioButtonAgv1.Text = "Agv1 sẵn sàng";
+            this.radioButtonAgv1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.radioButtonAgv1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Quản lý xe";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mySqlCommandBuilder1
+            // 
+            this.mySqlCommandBuilder1.DataAdapter = null;
+            this.mySqlCommandBuilder1.QuotePrefix = "`";
+            this.mySqlCommandBuilder1.QuoteSuffix = "`";
             // 
             // FormDelivery
             // 
