@@ -37,6 +37,8 @@ namespace rangdong_agv
             this.labelStn1Line = new System.Windows.Forms.Label();
             this.labelStnId1 = new System.Windows.Forms.Label();
             this.labelStnMaterialStatus1 = new System.Windows.Forms.Label();
+            this.lbnStation = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxStation1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,11 +158,30 @@ namespace rangdong_agv
             this.labelStnMaterialStatus1.Text = "Trạm vật tư";
             this.labelStnMaterialStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbnStation
+            // 
+            this.lbnStation.AutoSize = true;
+            this.lbnStation.Location = new System.Drawing.Point(41, 193);
+            this.lbnStation.Name = "lbnStation";
+            this.lbnStation.Size = new System.Drawing.Size(0, 13);
+            this.lbnStation.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbnStation);
             this.Controls.Add(this.groupBoxStation1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(183, 214);
@@ -180,5 +201,7 @@ namespace rangdong_agv
         private System.Windows.Forms.Label labelStn1Line;
         private System.Windows.Forms.Label labelStnId1;
         private System.Windows.Forms.Label labelStnMaterialStatus1;
+        private System.Windows.Forms.Label lbnStation;
+        private System.Windows.Forms.Label label1;
     }
 }

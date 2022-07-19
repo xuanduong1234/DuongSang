@@ -27,13 +27,14 @@ namespace rangdong_agv
             labelStnMaterialCode1.Text = "Mã vật tư: " + s.material_code;
             labelStnMaterialQuantity1.Text = "Số lượng: " + s.quantity.ToString();
             string station = s.id.ToString();
-            
+            lbnStation.Text = s.id.ToString();
+            lbnStation.Hide();
         }
 
         private void btnStnCallAgv1_Click(object sender, EventArgs e)
         {
 
-            SendData(groupBoxStation1.Text);
+            SendData(lbnStation.Text);
         }
 
         //public void btnStnCallAgv1_Click(Station e)

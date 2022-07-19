@@ -66,7 +66,7 @@ namespace rangdong_agv
                     else
                     {
                         if (this.labelFeedingDeliveryStation2.Text != deliveryStationId)
-                            MessageBox.Show("None of the shelf is available!");
+                            MessageBox.Show("Không có kệ trống");
                     }
 
                 }
