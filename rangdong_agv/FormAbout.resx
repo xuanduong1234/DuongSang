@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>The system is developed by Department of Industrial Automation,
-School of Eletrical and Computer Engineering,
-Hanoi University of Science and Technology
-
-With the support of Rang Dong Light Source &amp; Vacuum Flask Joint Stock Company
-
-Development team: 
-Project manager: Dr. Nguyen Danh Huy
-Hardware leader: Dr. Nguyen Manh Linh
-Software leader: Dr. Hoang Duc Chinh
-Team members:  ...</value>
-  </data>
 </root>

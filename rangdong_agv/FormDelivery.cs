@@ -159,6 +159,275 @@ namespace rangdong_agv
             //this.textBoxTest.Text = this.agvParams.Shelf1 + "\r\n" + this.agvParams.Shelf2;
             this.btnFeedingClear1.Enabled = false;
             this.btnFeedingClear2.Enabled = false;
+
+            //Trạm D01 (Kí hiệu: 07, STT: 1)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "1") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "1")))
+            {
+                textBoxTest.Text = "7A 23 01 01 FE 00 01 01 1A 01 01 02 02 07 03 02 04 03 05 02 07 06 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            ////AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "1") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "1")))
+            {
+                textBoxTest.Text = "7A 23 01 02 FE 00 01 01 1A 01 01 02 02 07 03 02 04 03 05 02 07 06 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            ////AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "1") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "1")))
+            {
+                textBoxTest.Text = "7A 23 01 03 FE 00 01 01 1A 01 01 02 02 07 03 02 04 03 05 02 07 06 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D02 (Kí hiệu: 08, STT: 2)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "2") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "2")))
+            {
+                textBoxTest.Text = "7A 27 01 01 FE 00 02 01 1E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 06 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "2") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "2")))
+            {
+                textBoxTest.Text = "7A 27 01 02 FE 00 02 01 1E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 06 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "2") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "2")))
+            {
+                textBoxTest.Text = "7A 27 01 03 FE 00 02 01 1E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 06 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+
+            //Trạm D03 (Kí hiệu: 09, STT: 3)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "3") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "3")))
+            {
+                textBoxTest.Text = "7A 2B 01 01 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "3") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "3")))
+            {
+                textBoxTest.Text = "7A 2B 01 02 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "3") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "3")))
+            {
+                textBoxTest.Text = "7A 2B 01 03 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D04 (Kí hiệu: 0A, STT: 4)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "4") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "4")))
+            {
+                textBoxTest.Text = "7A 2F 01 01 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 06 0A 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "4") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "4")))
+            {
+                textBoxTest.Text = "7A 2F 01 02 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 06 0A 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "4") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "4")))
+            {
+                textBoxTest.Text = "7A 2F 01 03 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 06 0A 06 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D05 (kí hiệu: 0B, STT: 5)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "5") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "5")))
+            {
+                textBoxTest.Text = "7A 33 01 01 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 06 0B 06 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "5") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "5")))
+            {
+                textBoxTest.Text = "7A 33 01 02 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 06 0B 06 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "5") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "5")))
+            {
+                textBoxTest.Text = "7A 33 01 03 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 06 0B 06 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D06 (Kí hiệu: 0C, STT: 6)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "6") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "6")))
+            {
+                textBoxTest.Text = "7A 37 01 01 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 06 0C 06 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "6") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "6")))
+            {
+                textBoxTest.Text = "7A 37 01 02 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 06 0C 06 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "6") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "6")))
+            {
+                textBoxTest.Text = "7A 37 01 03 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 06 0C 06 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D07 (Kí hiệu: 0D, STT: 7)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "7") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "7")))
+            {
+                textBoxTest.Text = "7A 3B 01 01 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 02 0D 06 0D 06 0C 02 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "7") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "7")))
+            {
+                textBoxTest.Text = "7A 3B 01 02 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 02 0D 06 0D 06 0C 02 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "7") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "7")))
+            {
+                textBoxTest.Text = "7A 3B 01 03 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 05 02 07 02 08 02 09 02 0A 02 0B 02 0C 02 0D 06 0D 06 0C 02 0B 02 0A 02 09 02 08 02 07 02 05 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D11 (Kí hiệu: C1, STT: 8)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "8") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "8")))
+            {
+                textBoxTest.Text = "7A 23 01 01 FE 00 08 01 1A 01 01 02 02 07 03 02 04 03 06 02 C1 06 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "8") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "8")))
+            {
+                textBoxTest.Text = "7A 23 01 02 FE 00 08 01 1A 01 01 02 02 07 03 02 04 03 06 02 C1 06 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "8") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "8")))
+            {
+                textBoxTest.Text = "7A 23 01 03 FE 00 08 01 1A 01 01 02 02 07 03 02 04 03 06 02 C1 06 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D12 (Kí hiệu: C2, STT: 9)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "9") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "9")))
+            {
+                textBoxTest.Text = "7A 27 01 01 FE 00 09 01 1E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 06 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "9") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "9")))
+            {
+                textBoxTest.Text = "7A 27 01 02 FE 00 09 01 1E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 06 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "9") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "9")))
+            {
+                textBoxTest.Text = "7A 27 01 03 FE 00 09 01 1E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 06 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+
+            //Trạm D13 (Kí hiệu: C3, STT: 10)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "10") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "10")))
+            {
+                textBoxTest.Text = "7A 2B 01 01 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "10") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "10")))
+            {
+                textBoxTest.Text = "7A 2B 01 02 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "10") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "10")))
+            {
+                textBoxTest.Text = "7A 2B 01 03 FE 00 03 01 22 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+
+            //Trạm D14 (Kí hiệu: C4, STT: 11)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "11") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "11")))
+            {
+                textBoxTest.Text = "7A 2F 01 01 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 06 C4 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "11") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "11")))
+            {
+                textBoxTest.Text = "7A 2F 01 02 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 06 C4 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "11") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "11")))
+            {
+                textBoxTest.Text = "7A 2F 01 03 FE 00 04 01 26 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 06 C4 06 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D15 (kí hiệu: C5, STT: 12)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "12") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "12")))
+            {
+                textBoxTest.Text = "7A 33 01 01 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 06 C5 06 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "12") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "12")))
+            {
+                textBoxTest.Text = "7A 33 01 02 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 06 C5 06 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "12") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "12")))
+            {
+                textBoxTest.Text = "7A 33 01 03 FE 00 05 01 2A 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 06 C5 06 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D16 (Kí hiệu: C6, STT: 13)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "13") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "13")))
+            {
+                textBoxTest.Text = "7A 37 01 01 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 06 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "13") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "13")))
+            {
+                textBoxTest.Text = "7A 37 01 02 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 06 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "13") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "13")))
+            {
+                textBoxTest.Text = "7A 37 01 03 FE 00 06 01 2E 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 06 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //Trạm D17 (Kí hiệu: C7, STT: 14)
+            //AGV1
+            if (radioButtonAgv1.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "14") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "14")))
+            {
+                textBoxTest.Text = "7A 3B 01 01 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 02 C7 06 C7 02 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV2
+            if (radioButtonAgv2.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "14") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "14")))
+            {
+                textBoxTest.Text = "7A 3B 01 02 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 02 C7 06 C7 02 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
+
+            //AGV3
+            if (radioButtonAgv3.Checked == true && ((comboBoxFeedingStation1.Text == "1" && labelFeedingDeliveryStation1.Text == "14") || (comboBoxFeedingStation2.Text == "1" && labelFeedingDeliveryStation2.Text == "14")))
+            {
+                textBoxTest.Text = "7A 3B 01 02 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 02 C7 06 C7 02 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
+            }
         }
        
     }
