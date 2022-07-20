@@ -428,7 +428,15 @@ namespace rangdong_agv
             {
                 textBoxTest.Text = "7A 3B 01 02 FE 00 07 01 32 01 01 02 02 07 03 02 04 03 06 02 C1 02 C2 02 C3 02 C4 02 C5 02 C6 02 C7 06 C7 02 C6 02 C5 02 C4 02 C3 02 C2 02 C1 02 06 02 04 02 03 01 02 01 01 09 7F";
             }
+            if (radioButtonAgv1.Checked == true)
+                radioButtonAgv1.ForeColor = Color.Green;
+            if (radioButtonAgv2.Checked == true)
+                radioButtonAgv2.ForeColor = Color.Green;
+            if (radioButtonAgv3.Checked == true)
+                radioButtonAgv3.ForeColor = Color.Green;
+
+
         }
-       
+
     }
 }

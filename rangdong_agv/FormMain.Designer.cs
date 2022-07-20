@@ -31,48 +31,48 @@ namespace rangdong_agv
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelButtons = new System.Windows.Forms.Panel();
-            this.btnChart = new System.Windows.Forms.Button();
-            this.txtBoxRxMsgTest = new System.Windows.Forms.TextBox();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelConnection = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBoxComPort = new System.Windows.Forms.ComboBox();
-            this.labelComPort = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnDisconnect = new FontAwesome.Sharp.IconButton();
-            this.btnConnect = new FontAwesome.Sharp.IconButton();
-            this.iconNetwork = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnError = new FontAwesome.Sharp.IconButton();
+            this.txtBoxRxMsgTest = new System.Windows.Forms.TextBox();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
-            this.btnSettings = new FontAwesome.Sharp.IconButton();
-            this.btnSchedule = new FontAwesome.Sharp.IconButton();
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.btnDelivery = new FontAwesome.Sharp.IconButton();
             this.btnOverview = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panelConnection = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDisconnect = new FontAwesome.Sharp.IconButton();
+            this.btnConnect = new FontAwesome.Sharp.IconButton();
+            this.comboBoxComPort = new System.Windows.Forms.ComboBox();
+            this.labelComPort = new System.Windows.Forms.Label();
+            this.iconNetwork = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnChart = new FontAwesome.Sharp.IconButton();
+            this.btnSchedule = new FontAwesome.Sharp.IconButton();
+            this.btnSettings = new FontAwesome.Sharp.IconButton();
             this.panelButtons.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelConnection.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelButtons
             // 
-            this.panelButtons.Controls.Add(this.btnError);
+            this.panelButtons.Controls.Add(this.btnSettings);
+            this.panelButtons.Controls.Add(this.btnSchedule);
             this.panelButtons.Controls.Add(this.btnChart);
+            this.panelButtons.Controls.Add(this.btnError);
             this.panelButtons.Controls.Add(this.txtBoxRxMsgTest);
             this.panelButtons.Controls.Add(this.btnExit);
             this.panelButtons.Controls.Add(this.btnAbout);
-            this.panelButtons.Controls.Add(this.btnSettings);
-            this.panelButtons.Controls.Add(this.btnSchedule);
             this.panelButtons.Controls.Add(this.btnReport);
             this.panelButtons.Controls.Add(this.btnDelivery);
             this.panelButtons.Controls.Add(this.btnOverview);
@@ -82,195 +82,6 @@ namespace rangdong_agv
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(220, 749);
             this.panelButtons.TabIndex = 0;
-            // 
-            // btnChart
-            // 
-            this.btnChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChart.FlatAppearance.BorderSize = 0;
-            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnChart.Location = new System.Drawing.Point(0, 424);
-            this.btnChart.Name = "btnChart";
-            this.btnChart.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnChart.Size = new System.Drawing.Size(220, 54);
-            this.btnChart.TabIndex = 0;
-            this.btnChart.Text = "Biểu đồ hoạt động";
-            this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChart.UseVisualStyleBackColor = false;
-            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
-            // 
-            // txtBoxRxMsgTest
-            // 
-            this.txtBoxRxMsgTest.Location = new System.Drawing.Point(0, 532);
-            this.txtBoxRxMsgTest.Multiline = true;
-            this.txtBoxRxMsgTest.Name = "txtBoxRxMsgTest";
-            this.txtBoxRxMsgTest.Size = new System.Drawing.Size(220, 157);
-            this.txtBoxRxMsgTest.TabIndex = 2;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelLogo.Controls.Add(this.pictureBoxLogo);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 100);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // panelConnection
-            // 
-            this.panelConnection.Controls.Add(this.tableLayoutPanel1);
-            this.panelConnection.Controls.Add(this.panel1);
-            this.panelConnection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConnection.Location = new System.Drawing.Point(220, 0);
-            this.panelConnection.Name = "panelConnection";
-            this.panelConnection.Size = new System.Drawing.Size(1044, 100);
-            this.panelConnection.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnDisconnect, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBoxComPort, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelComPort, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.iconNetwork, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(664, 100);
-            this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // comboBoxComPort
-            // 
-            this.comboBoxComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBoxComPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.comboBoxComPort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxComPort.ForeColor = System.Drawing.Color.Gainsboro;
-            this.comboBoxComPort.FormattingEnabled = true;
-            this.comboBoxComPort.Location = new System.Drawing.Point(138, 35);
-            this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(160, 29);
-            this.comboBoxComPort.TabIndex = 2;
-            // 
-            // labelComPort
-            // 
-            this.labelComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelComPort.AutoSize = true;
-            this.labelComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComPort.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelComPort.Location = new System.Drawing.Point(43, 39);
-            this.labelComPort.Name = "labelComPort";
-            this.labelComPort.Size = new System.Drawing.Size(87, 21);
-            this.labelComPort.TabIndex = 3;
-            this.labelComPort.Text = "COM Port";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.labelUsername);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(664, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 100);
-            this.panel1.TabIndex = 7;
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelUsername.Location = new System.Drawing.Point(71, 33);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(200, 30);
-            this.labelUsername.TabIndex = 1;
-            this.labelUsername.Text = "Admin";
-            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(220, 100);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1044, 649);
-            this.panelChildForm.TabIndex = 2;
-            // 
-            // btnDisconnect
-            // 
-            this.btnDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnDisconnect.FlatAppearance.BorderSize = 0;
-            this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisconnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisconnect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDisconnect.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnDisconnect.IconColor = System.Drawing.Color.Black;
-            this.btnDisconnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDisconnect.Location = new System.Drawing.Point(458, 35);
-            this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(120, 29);
-            this.btnDisconnect.TabIndex = 6;
-            this.btnDisconnect.Text = "&Disconnect";
-            this.btnDisconnect.UseVisualStyleBackColor = false;
-            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnConnect.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnConnect.IconColor = System.Drawing.Color.Black;
-            this.btnConnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnect.Location = new System.Drawing.Point(318, 35);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(120, 29);
-            this.btnConnect.TabIndex = 5;
-            this.btnConnect.Text = "&Connect";
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
-            // iconNetwork
-            // 
-            this.iconNetwork.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.iconNetwork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
-            this.iconNetwork.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconNetwork.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
-            this.iconNetwork.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconNetwork.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconNetwork.Location = new System.Drawing.Point(3, 34);
-            this.iconNetwork.Name = "iconNetwork";
-            this.iconNetwork.Size = new System.Drawing.Size(32, 32);
-            this.iconNetwork.TabIndex = 4;
-            this.iconNetwork.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(277, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // btnError
             // 
@@ -287,7 +98,7 @@ namespace rangdong_agv
             this.btnError.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnError.IconSize = 32;
             this.btnError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnError.Location = new System.Drawing.Point(0, 478);
+            this.btnError.Location = new System.Drawing.Point(0, 316);
             this.btnError.Name = "btnError";
             this.btnError.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnError.Size = new System.Drawing.Size(220, 54);
@@ -297,6 +108,14 @@ namespace rangdong_agv
             this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnError.UseVisualStyleBackColor = false;
             this.btnError.Click += new System.EventHandler(this.btnError_Click);
+            // 
+            // txtBoxRxMsgTest
+            // 
+            this.txtBoxRxMsgTest.Location = new System.Drawing.Point(0, 532);
+            this.txtBoxRxMsgTest.Multiline = true;
+            this.txtBoxRxMsgTest.Name = "txtBoxRxMsgTest";
+            this.txtBoxRxMsgTest.Size = new System.Drawing.Size(220, 157);
+            this.txtBoxRxMsgTest.TabIndex = 2;
             // 
             // btnExit
             // 
@@ -334,73 +153,21 @@ namespace rangdong_agv
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.Map;
             this.btnAbout.IconColor = System.Drawing.Color.Gainsboro;
             this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbout.IconSize = 32;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 370);
+            this.btnAbout.Location = new System.Drawing.Point(0, 262);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAbout.Size = new System.Drawing.Size(220, 54);
             this.btnAbout.TabIndex = 5;
-            this.btnAbout.Text = "Thông tin";
+            this.btnAbout.Text = "Bản đồ đương đi";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAbout.UseVisualStyleBackColor = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnSettings.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSettings.IconSize = 32;
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 316);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(220, 54);
-            this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Cài đặt";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btnSchedule
-            // 
-            this.btnSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSchedule.FlatAppearance.BorderSize = 0;
-            this.btnSchedule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchedule.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
-            this.btnSchedule.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSchedule.IconSize = 32;
-            this.btnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 262);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSchedule.Size = new System.Drawing.Size(220, 54);
-            this.btnSchedule.TabIndex = 4;
-            this.btnSchedule.Text = "Lịch sản xuất";
-            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSchedule.UseVisualStyleBackColor = false;
-            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // btnReport
             // 
@@ -479,6 +246,16 @@ namespace rangdong_agv
             this.btnOverview.UseVisualStyleBackColor = false;
             this.btnOverview.Click += new System.EventHandler(this.btnOverview_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogo.Controls.Add(this.pictureBoxLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 100);
+            this.panelLogo.TabIndex = 1;
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -489,6 +266,236 @@ namespace rangdong_agv
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
+            // 
+            // panelConnection
+            // 
+            this.panelConnection.Controls.Add(this.tableLayoutPanel1);
+            this.panelConnection.Controls.Add(this.panel1);
+            this.panelConnection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConnection.Location = new System.Drawing.Point(220, 0);
+            this.panelConnection.Name = "panelConnection";
+            this.panelConnection.Size = new System.Drawing.Size(1044, 100);
+            this.panelConnection.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnDisconnect, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxComPort, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelComPort, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconNetwork, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(664, 100);
+            this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDisconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnDisconnect.FlatAppearance.BorderSize = 0;
+            this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisconnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisconnect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDisconnect.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDisconnect.IconColor = System.Drawing.Color.Black;
+            this.btnDisconnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDisconnect.Location = new System.Drawing.Point(458, 35);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(120, 29);
+            this.btnDisconnect.TabIndex = 6;
+            this.btnDisconnect.Text = "&Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = false;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnConnect.FlatAppearance.BorderSize = 0;
+            this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnConnect.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnConnect.IconColor = System.Drawing.Color.Black;
+            this.btnConnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnect.Location = new System.Drawing.Point(318, 35);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(120, 29);
+            this.btnConnect.TabIndex = 5;
+            this.btnConnect.Text = "&Connect";
+            this.btnConnect.UseVisualStyleBackColor = false;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // comboBoxComPort
+            // 
+            this.comboBoxComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBoxComPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.comboBoxComPort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxComPort.ForeColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxComPort.FormattingEnabled = true;
+            this.comboBoxComPort.Location = new System.Drawing.Point(138, 35);
+            this.comboBoxComPort.Name = "comboBoxComPort";
+            this.comboBoxComPort.Size = new System.Drawing.Size(160, 29);
+            this.comboBoxComPort.TabIndex = 2;
+            // 
+            // labelComPort
+            // 
+            this.labelComPort.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelComPort.AutoSize = true;
+            this.labelComPort.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelComPort.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelComPort.Location = new System.Drawing.Point(43, 39);
+            this.labelComPort.Name = "labelComPort";
+            this.labelComPort.Size = new System.Drawing.Size(87, 21);
+            this.labelComPort.TabIndex = 3;
+            this.labelComPort.Text = "COM Port";
+            // 
+            // iconNetwork
+            // 
+            this.iconNetwork.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.iconNetwork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
+            this.iconNetwork.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconNetwork.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
+            this.iconNetwork.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconNetwork.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconNetwork.Location = new System.Drawing.Point(3, 34);
+            this.iconNetwork.Name = "iconNetwork";
+            this.iconNetwork.Size = new System.Drawing.Size(32, 32);
+            this.iconNetwork.TabIndex = 4;
+            this.iconNetwork.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.labelUsername);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(664, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(380, 100);
+            this.panel1.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Location = new System.Drawing.Point(277, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelUsername.Location = new System.Drawing.Point(71, 33);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(200, 30);
+            this.labelUsername.TabIndex = 1;
+            this.labelUsername.Text = "Admin";
+            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(220, 100);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1044, 649);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // btnChart
+            // 
+            this.btnChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChart.FlatAppearance.BorderSize = 0;
+            this.btnChart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChart.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
+            this.btnChart.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChart.IconSize = 32;
+            this.btnChart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChart.Location = new System.Drawing.Point(0, 370);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnChart.Size = new System.Drawing.Size(220, 54);
+            this.btnChart.TabIndex = 10;
+            this.btnChart.Text = "Biểu đồ hoạt động";
+            this.btnChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChart.UseVisualStyleBackColor = false;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
+            // btnSchedule
+            // 
+            this.btnSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedule.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSchedule.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.btnSchedule.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSchedule.IconSize = 32;
+            this.btnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedule.Location = new System.Drawing.Point(0, 424);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSchedule.Size = new System.Drawing.Size(220, 54);
+            this.btnSchedule.TabIndex = 12;
+            this.btnSchedule.Text = "Lịch sản xuất";
+            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click_1);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSettings.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.btnSettings.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSettings.IconSize = 32;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 478);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(220, 54);
+            this.btnSettings.TabIndex = 13;
+            this.btnSettings.Text = "Cài đặt";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click_1);
             // 
             // FormMain
             // 
@@ -509,14 +516,14 @@ namespace rangdong_agv
             this.panelButtons.ResumeLayout(false);
             this.panelButtons.PerformLayout();
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelConnection.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconNetwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,7 +534,6 @@ namespace rangdong_agv
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnOverview;
         private System.Windows.Forms.Panel panelConnection;
-        private FontAwesome.Sharp.IconButton btnSchedule;
         private FontAwesome.Sharp.IconButton btnReport;
         private FontAwesome.Sharp.IconButton btnDelivery;
         private FontAwesome.Sharp.IconButton btnAbout;
@@ -543,9 +549,10 @@ namespace rangdong_agv
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnSettings;
-        private System.Windows.Forms.Button btnChart;
         private FontAwesome.Sharp.IconButton btnError;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private FontAwesome.Sharp.IconButton btnSettings;
+        private FontAwesome.Sharp.IconButton btnSchedule;
+        private FontAwesome.Sharp.IconButton btnChart;
     }
 }

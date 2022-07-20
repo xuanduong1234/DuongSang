@@ -80,9 +80,8 @@ namespace rangdong_agv
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 690);
+            this.panel1.Size = new System.Drawing.Size(1024, 561);
             this.panel1.TabIndex = 0;
             // 
             // tblLayoutPanelDelivery
@@ -95,13 +94,12 @@ namespace rangdong_agv
             this.tblLayoutPanelDelivery.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLayoutPanelDelivery.Dock = System.Windows.Forms.DockStyle.Top;
             this.tblLayoutPanelDelivery.Location = new System.Drawing.Point(0, 0);
-            this.tblLayoutPanelDelivery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tblLayoutPanelDelivery.Name = "tblLayoutPanelDelivery";
             this.tblLayoutPanelDelivery.RowCount = 3;
-            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 271F));
-            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.tblLayoutPanelDelivery.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblLayoutPanelDelivery.Size = new System.Drawing.Size(1032, 690);
+            this.tblLayoutPanelDelivery.Size = new System.Drawing.Size(774, 561);
             this.tblLayoutPanelDelivery.TabIndex = 1;
             // 
             // panel2
@@ -109,10 +107,9 @@ namespace rangdong_agv
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1032, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(774, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 690);
+            this.panel2.Size = new System.Drawing.Size(250, 561);
             this.panel2.TabIndex = 0;
             // 
             // panel3
@@ -125,10 +122,9 @@ namespace rangdong_agv
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 369);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 300);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 321);
+            this.panel3.Size = new System.Drawing.Size(250, 261);
             this.panel3.TabIndex = 0;
             // 
             // btnMaterialDiscard
@@ -140,10 +136,9 @@ namespace rangdong_agv
             this.btnMaterialDiscard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterialDiscard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialDiscard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaterialDiscard.Location = new System.Drawing.Point(223, 2177);
-            this.btnMaterialDiscard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaterialDiscard.Location = new System.Drawing.Point(167, 1769);
             this.btnMaterialDiscard.Name = "btnMaterialDiscard";
-            this.btnMaterialDiscard.Size = new System.Drawing.Size(107, 49);
+            this.btnMaterialDiscard.Size = new System.Drawing.Size(80, 40);
             this.btnMaterialDiscard.TabIndex = 13;
             this.btnMaterialDiscard.Text = "&Discard";
             this.btnMaterialDiscard.UseVisualStyleBackColor = false;
@@ -157,10 +152,9 @@ namespace rangdong_agv
             this.btnMaterialApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterialApply.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialApply.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaterialApply.Location = new System.Drawing.Point(13, 2177);
-            this.btnMaterialApply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaterialApply.Location = new System.Drawing.Point(10, 1769);
             this.btnMaterialApply.Name = "btnMaterialApply";
-            this.btnMaterialApply.Size = new System.Drawing.Size(107, 49);
+            this.btnMaterialApply.Size = new System.Drawing.Size(80, 40);
             this.btnMaterialApply.TabIndex = 12;
             this.btnMaterialApply.Text = "&Apply";
             this.btnMaterialApply.UseVisualStyleBackColor = false;
@@ -180,11 +174,9 @@ namespace rangdong_agv
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.groupBox3.Location = new System.Drawing.Point(0, 314);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(0, 255);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(312, 265);
+            this.groupBox3.Size = new System.Drawing.Size(233, 215);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Giá xe 2";
@@ -192,10 +184,9 @@ namespace rangdong_agv
             // comboBoxFeedingMaterialCode2
             // 
             this.comboBoxFeedingMaterialCode2.FormattingEnabled = true;
-            this.comboBoxFeedingMaterialCode2.Location = new System.Drawing.Point(141, 32);
-            this.comboBoxFeedingMaterialCode2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingMaterialCode2.Location = new System.Drawing.Point(106, 26);
             this.comboBoxFeedingMaterialCode2.Name = "comboBoxFeedingMaterialCode2";
-            this.comboBoxFeedingMaterialCode2.Size = new System.Drawing.Size(160, 31);
+            this.comboBoxFeedingMaterialCode2.Size = new System.Drawing.Size(121, 29);
             this.comboBoxFeedingMaterialCode2.TabIndex = 16;
             // 
             // btnFeedingClear2
@@ -207,10 +198,9 @@ namespace rangdong_agv
             this.btnFeedingClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeedingClear2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFeedingClear2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFeedingClear2.Location = new System.Drawing.Point(199, 202);
-            this.btnFeedingClear2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFeedingClear2.Location = new System.Drawing.Point(148, 164);
             this.btnFeedingClear2.Name = "btnFeedingClear2";
-            this.btnFeedingClear2.Size = new System.Drawing.Size(107, 49);
+            this.btnFeedingClear2.Size = new System.Drawing.Size(80, 40);
             this.btnFeedingClear2.TabIndex = 15;
             this.btnFeedingClear2.Text = "&Clear";
             this.btnFeedingClear2.UseVisualStyleBackColor = false;
@@ -221,10 +211,9 @@ namespace rangdong_agv
             this.labelFeedingDeliveryStation2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFeedingDeliveryStation2.ForeColor = System.Drawing.Color.Gainsboro;
             this.labelFeedingDeliveryStation2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelFeedingDeliveryStation2.Location = new System.Drawing.Point(144, 161);
-            this.labelFeedingDeliveryStation2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFeedingDeliveryStation2.Location = new System.Drawing.Point(108, 131);
             this.labelFeedingDeliveryStation2.Name = "labelFeedingDeliveryStation2";
-            this.labelFeedingDeliveryStation2.Size = new System.Drawing.Size(160, 37);
+            this.labelFeedingDeliveryStation2.Size = new System.Drawing.Size(120, 30);
             this.labelFeedingDeliveryStation2.TabIndex = 9;
             this.labelFeedingDeliveryStation2.Text = "N/A";
             this.labelFeedingDeliveryStation2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,10 +223,9 @@ namespace rangdong_agv
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label15.Location = new System.Drawing.Point(11, 42);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(8, 34);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 23);
+            this.label15.Size = new System.Drawing.Size(40, 21);
             this.label15.TabIndex = 1;
             this.label15.Text = "Mã:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,10 +235,9 @@ namespace rangdong_agv
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label16.Location = new System.Drawing.Point(11, 167);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(8, 136);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(108, 23);
+            this.label16.Size = new System.Drawing.Size(94, 21);
             this.label16.TabIndex = 8;
             this.label16.Text = "Trạm nhận:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -260,10 +247,9 @@ namespace rangdong_agv
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label17.Location = new System.Drawing.Point(8, 122);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(6, 99);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(99, 23);
+            this.label17.Size = new System.Drawing.Size(85, 21);
             this.label17.TabIndex = 3;
             this.label17.Text = "Trạm cấp:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,10 +261,9 @@ namespace rangdong_agv
             this.comboBoxFeedingShelf2.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBoxFeedingShelf2.Location = new System.Drawing.Point(141, 75);
-            this.comboBoxFeedingShelf2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingShelf2.Location = new System.Drawing.Point(106, 61);
             this.comboBoxFeedingShelf2.Name = "comboBoxFeedingShelf2";
-            this.comboBoxFeedingShelf2.Size = new System.Drawing.Size(159, 31);
+            this.comboBoxFeedingShelf2.Size = new System.Drawing.Size(120, 29);
             this.comboBoxFeedingShelf2.TabIndex = 7;
             // 
             // label18
@@ -286,10 +271,9 @@ namespace rangdong_agv
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label18.Location = new System.Drawing.Point(8, 79);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(6, 64);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 23);
+            this.label18.Size = new System.Drawing.Size(77, 21);
             this.label18.TabIndex = 4;
             this.label18.Text = "Số lượng:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,10 +284,9 @@ namespace rangdong_agv
             this.comboBoxFeedingStation2.FormattingEnabled = true;
             this.comboBoxFeedingStation2.Items.AddRange(new object[] {
             "1"});
-            this.comboBoxFeedingStation2.Location = new System.Drawing.Point(141, 118);
-            this.comboBoxFeedingStation2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingStation2.Location = new System.Drawing.Point(106, 96);
             this.comboBoxFeedingStation2.Name = "comboBoxFeedingStation2";
-            this.comboBoxFeedingStation2.Size = new System.Drawing.Size(159, 31);
+            this.comboBoxFeedingStation2.Size = new System.Drawing.Size(120, 29);
             this.comboBoxFeedingStation2.TabIndex = 6;
             // 
             // groupBox2
@@ -320,11 +303,9 @@ namespace rangdong_agv
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.groupBox2.Location = new System.Drawing.Point(0, 49);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(312, 265);
+            this.groupBox2.Size = new System.Drawing.Size(233, 215);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Giá xe 1";
@@ -338,10 +319,9 @@ namespace rangdong_agv
             this.btnFeedingClear1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeedingClear1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFeedingClear1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFeedingClear1.Location = new System.Drawing.Point(198, 202);
-            this.btnFeedingClear1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFeedingClear1.Location = new System.Drawing.Point(147, 164);
             this.btnFeedingClear1.Name = "btnFeedingClear1";
-            this.btnFeedingClear1.Size = new System.Drawing.Size(107, 49);
+            this.btnFeedingClear1.Size = new System.Drawing.Size(80, 40);
             this.btnFeedingClear1.TabIndex = 14;
             this.btnFeedingClear1.Text = "&Clear";
             this.btnFeedingClear1.UseVisualStyleBackColor = false;
@@ -350,10 +330,9 @@ namespace rangdong_agv
             // comboBoxFeedingMaterialCode1
             // 
             this.comboBoxFeedingMaterialCode1.FormattingEnabled = true;
-            this.comboBoxFeedingMaterialCode1.Location = new System.Drawing.Point(145, 36);
-            this.comboBoxFeedingMaterialCode1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingMaterialCode1.Location = new System.Drawing.Point(109, 29);
             this.comboBoxFeedingMaterialCode1.Name = "comboBoxFeedingMaterialCode1";
-            this.comboBoxFeedingMaterialCode1.Size = new System.Drawing.Size(160, 31);
+            this.comboBoxFeedingMaterialCode1.Size = new System.Drawing.Size(121, 29);
             this.comboBoxFeedingMaterialCode1.TabIndex = 10;
             // 
             // labelFeedingDeliveryStation1
@@ -361,10 +340,9 @@ namespace rangdong_agv
             this.labelFeedingDeliveryStation1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFeedingDeliveryStation1.ForeColor = System.Drawing.Color.Gainsboro;
             this.labelFeedingDeliveryStation1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelFeedingDeliveryStation1.Location = new System.Drawing.Point(144, 161);
-            this.labelFeedingDeliveryStation1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFeedingDeliveryStation1.Location = new System.Drawing.Point(108, 131);
             this.labelFeedingDeliveryStation1.Name = "labelFeedingDeliveryStation1";
-            this.labelFeedingDeliveryStation1.Size = new System.Drawing.Size(160, 37);
+            this.labelFeedingDeliveryStation1.Size = new System.Drawing.Size(120, 30);
             this.labelFeedingDeliveryStation1.TabIndex = 9;
             this.labelFeedingDeliveryStation1.Text = "N/A";
             this.labelFeedingDeliveryStation1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,10 +352,9 @@ namespace rangdong_agv
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(11, 39);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(8, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 23);
+            this.label9.Size = new System.Drawing.Size(40, 21);
             this.label9.TabIndex = 1;
             this.label9.Text = "Mã:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -387,10 +364,9 @@ namespace rangdong_agv
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(8, 167);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(6, 136);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 23);
+            this.label12.Size = new System.Drawing.Size(94, 21);
             this.label12.TabIndex = 8;
             this.label12.Text = "Trạm nhận:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,10 +376,9 @@ namespace rangdong_agv
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(9, 126);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(7, 102);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 23);
+            this.label10.Size = new System.Drawing.Size(85, 21);
             this.label10.TabIndex = 3;
             this.label10.Text = "Trạm cấp:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -415,10 +390,9 @@ namespace rangdong_agv
             this.comboBoxFeedingShelf1.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBoxFeedingShelf1.Location = new System.Drawing.Point(145, 79);
-            this.comboBoxFeedingShelf1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingShelf1.Location = new System.Drawing.Point(109, 64);
             this.comboBoxFeedingShelf1.Name = "comboBoxFeedingShelf1";
-            this.comboBoxFeedingShelf1.Size = new System.Drawing.Size(159, 31);
+            this.comboBoxFeedingShelf1.Size = new System.Drawing.Size(120, 29);
             this.comboBoxFeedingShelf1.TabIndex = 7;
             // 
             // label11
@@ -426,10 +400,9 @@ namespace rangdong_agv
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(9, 82);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(7, 67);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 23);
+            this.label11.Size = new System.Drawing.Size(77, 21);
             this.label11.TabIndex = 4;
             this.label11.Text = "Số lượng:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -440,10 +413,9 @@ namespace rangdong_agv
             this.comboBoxFeedingStation1.FormattingEnabled = true;
             this.comboBoxFeedingStation1.Items.AddRange(new object[] {
             "1"});
-            this.comboBoxFeedingStation1.Location = new System.Drawing.Point(145, 122);
-            this.comboBoxFeedingStation1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFeedingStation1.Location = new System.Drawing.Point(109, 99);
             this.comboBoxFeedingStation1.Name = "comboBoxFeedingStation1";
-            this.comboBoxFeedingStation1.Size = new System.Drawing.Size(159, 31);
+            this.comboBoxFeedingStation1.Size = new System.Drawing.Size(120, 29);
             this.comboBoxFeedingStation1.TabIndex = 6;
             // 
             // label8
@@ -452,9 +424,8 @@ namespace rangdong_agv
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gainsboro;
             this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(312, 49);
+            this.label8.Size = new System.Drawing.Size(233, 40);
             this.label8.TabIndex = 0;
             this.label8.Text = "Vật tư";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -472,18 +443,16 @@ namespace rangdong_agv
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(333, 369);
+            this.panel4.Size = new System.Drawing.Size(250, 300);
             this.panel4.TabIndex = 1;
             // 
             // textBoxTest
             // 
-            this.textBoxTest.Location = new System.Drawing.Point(8, 170);
-            this.textBoxTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTest.Location = new System.Drawing.Point(6, 138);
             this.textBoxTest.Multiline = true;
             this.textBoxTest.Name = "textBoxTest";
-            this.textBoxTest.Size = new System.Drawing.Size(320, 112);
+            this.textBoxTest.Size = new System.Drawing.Size(241, 92);
             this.textBoxTest.TabIndex = 6;
             // 
             // btnStopAgv
@@ -499,10 +468,9 @@ namespace rangdong_agv
             this.btnStopAgv.IconColor = System.Drawing.Color.Firebrick;
             this.btnStopAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStopAgv.IconSize = 20;
-            this.btnStopAgv.Location = new System.Drawing.Point(223, 306);
-            this.btnStopAgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStopAgv.Location = new System.Drawing.Point(167, 249);
             this.btnStopAgv.Name = "btnStopAgv";
-            this.btnStopAgv.Size = new System.Drawing.Size(107, 55);
+            this.btnStopAgv.Size = new System.Drawing.Size(80, 45);
             this.btnStopAgv.TabIndex = 5;
             this.btnStopAgv.Text = "Stop";
             this.btnStopAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -521,10 +489,9 @@ namespace rangdong_agv
             this.btnStartAgv.IconColor = System.Drawing.Color.SeaGreen;
             this.btnStartAgv.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStartAgv.IconSize = 20;
-            this.btnStartAgv.Location = new System.Drawing.Point(13, 306);
-            this.btnStartAgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStartAgv.Location = new System.Drawing.Point(10, 249);
             this.btnStartAgv.Name = "btnStartAgv";
-            this.btnStartAgv.Size = new System.Drawing.Size(107, 55);
+            this.btnStartAgv.Size = new System.Drawing.Size(80, 45);
             this.btnStartAgv.TabIndex = 4;
             this.btnStartAgv.Text = "Start";
             this.btnStartAgv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -535,12 +502,11 @@ namespace rangdong_agv
             this.radioButtonAgv3.AutoSize = true;
             this.radioButtonAgv3.Dock = System.Windows.Forms.DockStyle.Top;
             this.radioButtonAgv3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAgv3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButtonAgv3.Location = new System.Drawing.Point(0, 103);
-            this.radioButtonAgv3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonAgv3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.radioButtonAgv3.Location = new System.Drawing.Point(0, 90);
             this.radioButtonAgv3.Name = "radioButtonAgv3";
-            this.radioButtonAgv3.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.radioButtonAgv3.Size = new System.Drawing.Size(333, 27);
+            this.radioButtonAgv3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv3.Size = new System.Drawing.Size(250, 25);
             this.radioButtonAgv3.TabIndex = 3;
             this.radioButtonAgv3.TabStop = true;
             this.radioButtonAgv3.Text = "Agv3 sẵn sàng";
@@ -553,11 +519,10 @@ namespace rangdong_agv
             this.radioButtonAgv2.Dock = System.Windows.Forms.DockStyle.Top;
             this.radioButtonAgv2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAgv2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.radioButtonAgv2.Location = new System.Drawing.Point(0, 76);
-            this.radioButtonAgv2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonAgv2.Location = new System.Drawing.Point(0, 65);
             this.radioButtonAgv2.Name = "radioButtonAgv2";
-            this.radioButtonAgv2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.radioButtonAgv2.Size = new System.Drawing.Size(333, 27);
+            this.radioButtonAgv2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv2.Size = new System.Drawing.Size(250, 25);
             this.radioButtonAgv2.TabIndex = 2;
             this.radioButtonAgv2.TabStop = true;
             this.radioButtonAgv2.Text = "Agv2 sẵn sàng";
@@ -570,11 +535,10 @@ namespace rangdong_agv
             this.radioButtonAgv1.Dock = System.Windows.Forms.DockStyle.Top;
             this.radioButtonAgv1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAgv1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.radioButtonAgv1.Location = new System.Drawing.Point(0, 49);
-            this.radioButtonAgv1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonAgv1.Location = new System.Drawing.Point(0, 40);
             this.radioButtonAgv1.Name = "radioButtonAgv1";
-            this.radioButtonAgv1.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.radioButtonAgv1.Size = new System.Drawing.Size(333, 27);
+            this.radioButtonAgv1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radioButtonAgv1.Size = new System.Drawing.Size(250, 25);
             this.radioButtonAgv1.TabIndex = 1;
             this.radioButtonAgv1.TabStop = true;
             this.radioButtonAgv1.Text = "Agv1 sẵn sàng";
@@ -587,9 +551,8 @@ namespace rangdong_agv
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 49);
+            this.label1.Size = new System.Drawing.Size(250, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý xe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -602,12 +565,11 @@ namespace rangdong_agv
             // 
             // FormDelivery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1365, 690);
+            this.ClientSize = new System.Drawing.Size(1024, 561);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormDelivery";
             this.Text = "Delivery";
             this.panel1.ResumeLayout(false);

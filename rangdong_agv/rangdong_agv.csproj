@@ -122,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgvUtilities.cs" />
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +184,12 @@
     </Compile>
     <Compile Include="FormMain.designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMapAgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMapAgv.Designer.cs">
+      <DependentUpon>FormMapAgv.cs</DependentUpon>
     </Compile>
     <Compile Include="MySqlDto.cs" />
     <Compile Include="MySqlDAO.cs" />
@@ -242,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain_test.resx">
       <DependentUpon>FormMain_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMapAgv.resx">
+      <DependentUpon>FormMapAgv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

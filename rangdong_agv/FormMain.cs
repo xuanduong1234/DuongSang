@@ -494,12 +494,7 @@ namespace rangdong_agv
         {
             this.openChildForm(formDelivery);
         }
-
-        private void btnSchedule_Click(object sender, EventArgs e)
-        {
-            this.openChildForm(formSchedule);
-        }
-
+     
         private void btnAbout_Click(object sender, EventArgs e)
         {
             this.openChildForm(formAbout);
@@ -509,10 +504,16 @@ namespace rangdong_agv
         {
             this.openChildForm(formReport);
         }
-
-        private void btnSettings_Click(object sender, EventArgs e)
+           
+        private void btnError_Click(object sender, EventArgs e)
         {
-            this.openChildForm(formSetting);
+            this.openChildForm(formError);
+            
+        }
+
+        private void btnChart_Click_1(object sender, EventArgs e)
+        {
+            this.openChildForm(formDoThi);
         }
 
         private void btnChart_Click(object sender, EventArgs e)
@@ -520,11 +521,14 @@ namespace rangdong_agv
             this.openChildForm(formDoThi);
         }
 
-        private void btnError_Click(object sender, EventArgs e)
+        private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            this.openChildForm(formError);
-            
+            this.openChildForm(formSchedule);
         }
-        
+
+        private void btnSettings_Click_1(object sender, EventArgs e)
+        {
+            this.openChildForm(formSetting);
+        }
     }
 }
