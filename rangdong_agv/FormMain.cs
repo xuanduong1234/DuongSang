@@ -197,6 +197,7 @@ namespace rangdong_agv
                             Buffer.BlockCopy(buffer, 0, data_buffer, data_count, count);
                             data_count += count;
 
+
                             if (data_buffer[data_count - 1] == LoraGenericPacket.END_BYTE && data_count == data_buffer[1]) // complete packet
                             {
                                 messageComplete = 1;

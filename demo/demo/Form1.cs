@@ -15,6 +15,34 @@ namespace demo
 {
     public partial class Form1 : Form
     {
+        byte[] Saochep = new byte[4096];
+        byte ROUTE_PACKET_TYPE = 0x01;
+
+        //Line trạm nhận 1
+        byte TramNhan_D01 = 0x07;
+        byte TramNhan_D02 = 0x08;
+        byte TramNhan_D03 = 0x09;
+        byte TramNhan_D04 = 0x0A;
+        byte TramNhan_D05 = 0x0B;
+        byte TramNhan_D06 = 0x0C;
+        byte TramNhan_D07 = 0x0D;
+
+        //Line trạm nhận 2
+        byte TramNhan_D11 = 0xC1;
+        byte TramNhan_D12 = 0xC2;
+        Byte TramNhan_D13 = 0xC3;
+        byte TramNhan_D14 = 0xC4;
+        byte TramNhan_D15 = 0xC5;
+        byte TramNhan_D16 = 0xC6;
+        byte TramNhan_D17 = 0xC7;
+
+        int Message_type_ofset = 7;
+        int State_ofset = 11;
+        int TripId_ofset = 9;
+        int Position_ofset = 10;
+        int Count = 0;
+        float Bat_cap = 100;
+
         private String comPortName = "";
         public SerialPort comPort = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One); // default settings for comport
         private CancellationTokenSource readComPortThread_cts;
@@ -58,6 +86,8 @@ namespace demo
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
+            
+
             string comPortNameTemp = "";
             if (this.comboBoxComPort.SelectedItem != null)
                 comPortNameTemp = this.comboBoxComPort.SelectedItem.ToString();
@@ -215,6 +245,7 @@ namespace demo
                             if (data_count == data_buffer[1]) // complete packet
                             {
                                 messageComplete = 1;
+                                Saochep = data_buffer;
                             }
                             if (data_count > data_buffer[1])
                             {
@@ -223,7 +254,7 @@ namespace demo
                                 string raw_message = "";
                                 string parsed_message = "";
                                 AppendTextBox(raw_message, parsed_message);
-                            }
+                            }                            
                         }
                     }
 
@@ -256,6 +287,8 @@ namespace demo
 
                 }
             }
+
+            
         }
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
@@ -265,6 +298,98 @@ namespace demo
             {
                 e.Cancel = true;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //State
+            txtSate.Text = Saochep[State_ofset].ToString();
+            State_ofset += 2;
+
+            //TripId
+            txtTrip_Id.Text = Saochep[TripId_ofset].ToString();
+
+            //Position
+            txtPosition.Text = Saochep[Position_ofset].ToString();
+            Position_ofset +=2;
+
+            //Speed
+            Random _Speed1 = new Random();
+            int Speed1 = _Speed1.Next(0, 3);
+            byte speed1 = (byte)Speed1;
+
+            Random _Speed2 = new Random();
+            int Speed2 = _Speed1.Next(0, 5);
+            byte speed2 = (byte)Speed2;
+
+            ushort Speed = 0;
+            Speed = (ushort)(speed1 * 16 * 16 + speed2);
+
+            txtSpeed.Text = Speed.ToString();
+
+            //Batt_cap
+            txtBatt_cap.Text = Bat_cap.ToString();
+            byte bat_cap=(byte)Bat_cap;
+
+            //Batt_voltage
+            Random _BattVoltage1 = new Random();
+            int BattVoltage1 = _BattVoltage1.Next(0, 5);
+            byte battVoltage1 = (byte)Speed1;
+
+            Random _BattVoltage2 = new Random();
+            int BattVoltage2 = _BattVoltage2.Next(0, 10);
+            byte battVoltage2 = (byte)Speed2;
+
+            ushort BattVoltage = 0;
+            Speed = (ushort)(battVoltage1 * 16 * 16 + battVoltage2);
+
+            txtSpeed.Text = BattVoltage.ToString();
+
+            ///Gửi thông tin xe lên Form quản lí
+            Console.WriteLine("Testing!");
+
+            //Xe AGV1
+            if (comboBoxAGV.Text == "AGV1")
+            {
+                byte[] output = new byte[] { 0x7A, 0x12, 0x01, 0xFE, 0x02, 0x00, 0x02, 0x10, 0x09, Saochep[State_ofset], Saochep[TripId_ofset], Saochep[Position_ofset], speed1, speed2, bat_cap, battVoltage1, battVoltage2, 0x7F };
+                comPort.Write(output, 0, output.Length);
+            }
+
+            //Xe AGV2
+            if (comboBoxAGV.Text == "AGV2")
+            {
+                byte[] output = new byte[] { 0x7A, 0x12, 0x02, 0xFE, 0x02, 0x00, 0x02, 0x10, 0x09, Saochep[State_ofset], Saochep[TripId_ofset], Saochep[Position_ofset], speed1, speed2, bat_cap, battVoltage1, battVoltage2, 0x7F };
+                comPort.Write(output, 0, output.Length);
+            }
+
+            //Xe AGV3
+            if (comboBoxAGV.Text == "AGV3")
+            {
+                byte[] output = new byte[] { 0x7A, 0x12, 0x03, 0xFE, 0x02, 0x00, 0x02, 0x10, 0x09, Saochep[State_ofset], Saochep[TripId_ofset], Saochep[Position_ofset], speed1, speed2, bat_cap, battVoltage1, battVoltage2, 0x7F };
+                comPort.Write(output, 0, output.Length);
+            }
+
+            //Tăng giá trị biến đếm Count
+            Count++;
+
+            if (Count == 12)
+            {
+                timer1.Stop();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Nhận biết trạm nhận D01 -> D17
+            if (Saochep[Message_type_ofset] == ROUTE_PACKET_TYPE && Saochep[20] == TramNhan_D01)
+            {
+                timer1.Start();
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

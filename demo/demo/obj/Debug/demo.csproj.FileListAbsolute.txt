@@ -19,3 +19,25 @@ C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.csproj.Gen
 C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.csproj.CoreCompileInputs.cache
 C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.exe
 C:\Users\xuand\OneDrive\Máy tính\DuongSang\demo\demo\obj\Debug\demo.pdb
+D:\DATN\DuongSang\demo\demo\bin\Debug\demo.exe.config
+D:\DATN\DuongSang\demo\demo\bin\Debug\demo.exe
+D:\DATN\DuongSang\demo\demo\bin\Debug\demo.pdb
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.csproj.AssemblyReference.cache
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.csproj.SuggestedBindingRedirects.cache
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.Form1.resources
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.Properties.Resources.resources
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.csproj.GenerateResource.cache
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.csproj.CoreCompileInputs.cache
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.exe
+D:\DATN\DuongSang\demo\demo\obj\Debug\demo.pdb
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\bin\Debug\demo.exe.config
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\bin\Debug\demo.exe
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\bin\Debug\demo.pdb
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.csproj.AssemblyReference.cache
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.Form1.resources
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.Properties.Resources.resources
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.csproj.GenerateResource.cache
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.csproj.CoreCompileInputs.cache
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.exe
+C:\Users\Sang-PC\Desktop\DuongSang2\demo\demo\obj\Debug\demo.pdb

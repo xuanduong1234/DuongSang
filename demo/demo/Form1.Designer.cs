@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBoxRxMsgTest = new System.Windows.Forms.RichTextBox();
             this.labelComport = new System.Windows.Forms.Label();
             this.comboBoxComPort = new System.Windows.Forms.ComboBox();
@@ -49,8 +50,9 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxAGV = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // txtBoxRxMsgTest
@@ -103,9 +105,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(447, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Batt_voltage(V)";
+            this.label2.Text = "Batt_voltage(mV)";
             // 
             // txtBatt_voltage
             // 
@@ -149,6 +151,7 @@
             this.label8.Size = new System.Drawing.Size(55, 16);
             this.label8.TabIndex = 38;
             this.label8.Text = "Position";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -233,17 +236,17 @@
             this.button17.Text = "Vật cản";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBoxAGV
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxAGV.FormattingEnabled = true;
+            this.comboBoxAGV.Items.AddRange(new object[] {
             "AGV1",
             "AGV2",
             "AGV3"});
-            this.comboBox1.Location = new System.Drawing.Point(569, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 24);
-            this.comboBox1.TabIndex = 46;
+            this.comboBoxAGV.Location = new System.Drawing.Point(569, 54);
+            this.comboBoxAGV.Name = "comboBoxAGV";
+            this.comboBoxAGV.Size = new System.Drawing.Size(100, 24);
+            this.comboBoxAGV.TabIndex = 46;
             // 
             // button1
             // 
@@ -254,6 +257,12 @@
             this.button1.TabIndex = 47;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -262,7 +271,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(698, 397);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxAGV);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -314,8 +323,9 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxAGV;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
