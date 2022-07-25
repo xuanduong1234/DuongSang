@@ -32,6 +32,7 @@ namespace rangdong_agv
         private Chart formChart;
         private FormDoThi formDoThi;
         private FormError formError;
+        private Calender frormCalender;
 
         private AgvInfo agvInfo;
         private AgvParams agvParams;
@@ -55,6 +56,7 @@ namespace rangdong_agv
             this.formChart = new Chart();
             this.formDoThi = new FormDoThi();
             this.formError = new FormError();
+            this.frormCalender = new Calender();
             this.openChildForm(formAgvOverview);
             this.getComPortList();
         
@@ -524,7 +526,7 @@ namespace rangdong_agv
 
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            this.openChildForm(formSchedule);
+            this.openChildForm(frormCalender);
         }
 
         private void btnSettings_Click_1(object sender, EventArgs e)

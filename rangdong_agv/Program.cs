@@ -1,14 +1,4 @@
-﻿/* 
- * Copyright (C) Hanoi University of Science and Technology - All Rights Reserved
- * This file is written as part of Automated Guided Vehicles (AGV) Management System project. 
- * The project is developed and managed by the team in Department of Industrial Automation (DIA), 
- * School of Electrical and Computer Engineering (SEE), 
- * Hanoi University of Science and Technology (HUST).
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Hoang Duc Chinh <dc.hoang.vn@gmail.com>, 2020 November
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,10 +16,7 @@ namespace rangdong_agv
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new form_login());
-            //Application.Run(new FormMain_test());
             Application.Run(new FormMain());
         }
     }
 }
-
